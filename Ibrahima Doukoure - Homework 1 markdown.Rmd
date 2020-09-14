@@ -1,0 +1,20 @@
+---
+title: "Homework 1"
+author: "Ibrahima Doukoure"
+date: "9/14/2020"
+output: html_document
+---
+1) Names of people in my study group
+Ibrahima Doukoure
+Carol-Ann Jackson
+Abrou
+
+3) 
+
+4) The mean return on SP500 index in 2020 is 	
+3,079.04.
+When the previous day’s return was positive, the mean return on days would be positivie.
+When the previous 2 days were positive, the mean will also be positive and continue to increase.
+When the previous 2 days were negative, the mean may be postivie but it will decrease.
+The “hot hands fallacy” could be qualified as surprinsing discovery about statistics and I think that helps investment strategy in many ways: it warns us that there is not abosolute certainity about data and that we should be carefully in interpreting statistic analysis.
+
