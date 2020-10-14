@@ -1,0 +1,55 @@
+title: "Homework 4"
+author: "Ibrahima Doukoure & Alain Brou"
+date: "10/13/2020"
+output: html_document
+---
+1) Study Group
+Ibrahima Doukoure
+Alain Brou
+
+2) Results of Lab4
+
+load("C:/Users/owner/AppData/Local/Temp/acs2017_ny_data_yYHxwr")
+<- (AGE >= 25) & (AGE <= 55) & (LABFORCE == 2) & (WKSWORK2 > 4) & (UHRSWORK >= 35)
+<- (AGE >= 25)
+(AGE >= 25) & (AGE <= 55) & (LABFORCE == 2) & (WKSWORK2 > 4) & (UHRSWORK >= 35)
+(AGE >= 25) & (AGE <= 55) & (LABFORCE == 2) & (WKSWORK2 > 4) & (UHRSWORK >= 35)
+AGE >= 25
+AGE <= 55
+load("C:/Users/owner/AppData/Local/Temp/acs2017_ny_data_ibQhkX")
+attach(acs2017_n
+AGE >= 25
+(AGE >= 25) & (AGE <= 55) & (LABFORCE == 2) & (WKSWORK2 > 4) & (UHRSWORK >= 35)
+subset(acs2017_ny,AGE <= 55)
+subset(acs2017_ny,AGE >= 25)
+subset(acs2017_ny,LABFORCE == 2)
+subset(acs2017_ny,WKSWORK2 > 4)
+subset(acs2017_ny,UHRSWORK >= 35)
+attach(WKSWORK2 > 4)
+attach(acs2017_ny)
+summary(acs2017_ny)
+lm(INCWAGE ~ AGE + female + AfAm + Asian + Amindian + race_oth + Hispanic + educ_hs + educ_somecoll + educ_college + educ_advdeg)
+summary(lm(INCWAGE ~ AGE + female + AfAm + Asian + Amindian + race_oth + Hispanic + educ_hs + educ_somecoll + educ_college + educ_advdeg))
+plot(lm(INCWAGE ~ AGE + female + AfAm + Asian + Amindian + race_oth + Hispanic + educ_hs + educ_somecoll + educ_college + educ_advdeg))
+require(stargazer)
+require(lm(INCWAGE ~ AGE + female + AfAm + Asian + Amindian + race_oth + Hispanic + educ_hs + educ_somecoll + educ_college + educ_advdeg)
+stargazer((lm(INCWAGE ~ AGE + female + AfAm + Asian + Amindian + race_oth + Hispanic + educ_hs + educ_somecoll + educ_college + educ_advdeg)), type = Afam)
+NNobs <- length(INCWAGE)
+set.seed(12345)
+graph_obs <- (runif(NNobs) < 0.1)
+dat_graph <-subset(acs2017_ny,graph_obs)
+(runif(NNobs) < 0.1)
+subset(acs2017_ny,graph_obs)
+plot(INCWAGE ~ jitter(AGE, factor = 2), pch = 16, col = rgb(0.5, 0.5, 0.5, alpha = 0.2), data = dat_graph)
+plot(INCWAGE ~ jitter(AGE, factor = 2), pch = 16, col = rgb(0.5, 0.5, 0.5, alpha = 0.2), ylim = c(0,150000), data = dat_graph)
+data.frame(AGE = 25:55, female = 1, AfAm = 0, Asian = 0, Amindian = 1, race_oth = 1, Hispanic = 1, educ_hs = 0, educ_somecoll = 0, educ_college = 1, educ_advdeg = 0)
+predict(model_temp1, newdata = to_be_predicted2)
+predict(lm(INCWAGE ~ AGE + female + AfAm + Asian + Amindian + race_oth + Hispanic + educ_hs + educ_somecoll + educ_college + educ_advdeg), newdata = to_be_predicte)
+predict(lm(INCWAGE ~ AGE + female + AfAm + Asian + Amindian + race_oth + Hispanic + educ_hs + educ_somecoll + educ_college + educ_advdeg), newdata = data.frame(AGE = 25:55, female = 1, AfAm = 0, Asian = 0, Amindian = 1, race_oth = 1, Hispanic = 1, educ_hs = 0, educ_somecoll = 0, educ_college = 1, educ_advdeg = 0))
+lines(yhat ~ AGE, data = data.frame(AGE = 25:55, female = 1, AfAm = 0, Asian = 0, Amindian = 1, race_oth = 1, Hispanic = 1, educ_hs = 0, educ_somecoll = 0, educ_college = 1, educ_advdeg = 0))
+lines(INCWAGE ~ AGE, data = data.frame(AGE = 25:55, female = 1, AfAm = 0, Asian = 0, Amindian = 1, race_oth = 1, Hispanic = 1, educ_hs = 0, educ_somecoll = 0, educ_college = 1, educ_advdeg = 0))
+lines(INCWAGE ~ AGE, data = (AGE = 25:55, female = 1, AfAm = 0, Asian = 0, Amindian = 1, race_oth = 1, Hispanic = 1, educ_hs = 0, educ_somecoll = 0, educ_college = 1, educ_advdeg = 0))
+(INCWAGE ~ AGE, data = data.frame(AGE = 25:55, female = 1, AfAm = 0, Asian = 0, Amindian = 1, race_oth = 1, Hispanic = 1, educ_hs = 0, educ_somecoll = 0, educ_college = 1, educ_advdeg = 0))
+(WAGE ~ AGE, data = data.frame(AGE = 25:55, female = 1, AfAm = 0, Asian = 0, Amindian = 1, race_oth = 1, Hispanic = 1, educ_hs = 0, educ_somecoll = 0, educ_college = 1, educ_advdeg = 0))
+lines(INCWAGE ~ AGE, data = data.frame(AGE = 25:55, female = 1, AfAm = 0, Asian = 0, Amindian = 1, race_oth = 1, Hispanic = 1, educ_hs = 0, educ_somecoll = 0, educ_college = 1, educ_advdeg = 0))
+detach(acs2017_ny)
