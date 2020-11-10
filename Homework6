@@ -1,0 +1,566 @@
+Homework 6 by Ibrahima Doukoure
+Date 11/09/2020
+
+ 1) Study Group
+ Ibrahima Doukoure & Alain Brou
+ 
+ 2) Results of Lab6
+ 
+ We will upload acs20017 data, do some regressions and interpret positive or negative influences of many explanatory variables on the independant variable.
+ 
+ attach(acs2017_ny)
+model_v1 <- lm(INCWAGE ~ AGE)
+summary(model_v1)
+Call:
+lm(formula = INCWAGE ~ AGE)
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-39492 -31602 -25429  12541 612359 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 42296.810    439.916   96.15   <2e-16 ***
+AGE          -175.328      8.422  -20.82   <2e-16 ***
+---
+Signif. codes:  
+0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 66080 on 163156 degrees of freedom
+  (33427 observations deleted due to missingness)
+Multiple R-squared:  0.002649,	Adjusted R-squared:  0.002643 
+F-statistic: 433.4 on 1 and 163156 DF,  p-value: < 2.2e-16
+
+> confint(model_v1, level = 0.95)
+                 2.5 %     97.5 %
+(Intercept) 41434.5835 43159.0358
+AGE          -191.8345  -158.8207
+
+In this model1, we vant to know the influence of age on income. After the regression, we found that holding everything constant, when the age increase by 1 unit, the income is negaively influenced by 175.328. When the age is zero, the minimum income is  42296.810.
+
+
+model_v2 <- lm(acs2017_ny$INCWAGE ~ acs2017_ny$AGE)
+summary(model_v2)
+plot(model_v2)
+
+Call:
+lm(formula = acs2017_ny$INCWAGE ~ acs2017_ny$AGE)
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-39492 -31602 -25429  12541 612359 
+
+Coefficients:
+                Estimate Std. Error t value Pr(>|t|)    
+(Intercept)    42296.810    439.916   96.15   <2e-16 ***
+acs2017_ny$AGE  -175.328      8.422  -20.82   <2e-16 ***
+---
+Signif. codes:  
+0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 66080 on 163156 degrees of freedom
+  (33427 observations deleted due to missingness)
+Multiple R-squared:  0.002649,	Adjusted R-squared:  0.002643 
+F-statistic: 433.4 on 1 and 163156 DF,  p-value: < 2.2e-16
+
+> confint(model_v1, level = 0.95)
+                 2.5 %     97.5 %
+(Intercept) 41434.5835 43159.0358
+AGE          -191.8345  -158.8207
+> 
+> plot(model_v2)
+Call:
+In this mode2, we vant to know the influence of age on income. After the regression, we found that holding everything constant, when the age increase by 1 unit, the income is negaively influenced by 175.328. When the age is zero, the minimum income is  42296.810.
+
+lm(formula = INCWAGE ~ AGE, data = acs2017_ny)
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-39492 -31602 -25429  12541 612359 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 42296.810    439.916   96.15   <2e-16 ***
+AGE          -175.328      8.422  -20.82   <2e-16 ***
+---
+Signif. codes:  
+0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 66080 on 163156 degrees of freedom
+  (33427 observations deleted due to missingness)
+Multiple R-squared:  0.002649,	Adjusted R-squared:  0.002643 
+F-statistic: 433.4 on 1 and 163156 DF,  p-value: < 2.2e-16
+
+
+> model_logit1 <- glm(LABFORCE ~ AGE)
+> summary(model_logit1)
+
+Call:
+glm(formula = LABFORCE ~ AGE)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-1.0070  -0.7257   0.1403   0.6397   0.9808  
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept) 0.8242886  0.0031791   259.3   <2e-16 ***
+AGE         0.0121813  0.0000666   182.9   <2e-16 ***
+---
+Signif. codes:  
+0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for gaussian family taken to be 0.4797767)
+
+    Null deviance: 110365  on 196584  degrees of freedom
+Residual deviance:  94316  on 196583  degrees of freedom
+AIC: 413509
+
+Number of Fisher Scoring iterations: 2
+
+> levels(acs2017_ny$LABFORCE) <- c("NA","Not in LF","in LF")
+> levels(acs2017_ny$MARST) <- c("married spouse present","married spouse absent","separated","divorced","widowed","never married")
+> summary(acs2017_ny$MARST <- as.factor(acs2017_ny$MARST))
+    1     2     3     4     5     6 
+75194  4456  3437 14730 10307 88461 
+
+> summary(levels(acs2017_ny$MARST) <- c("married spouse present","married spouse absent","separated","divorced","widowed","never married"))
+   Length     Class      Mode 
+        6 character character 
+ acs2017_ny$age_bands <- cut(acs2017_ny$AGE,breaks=c(0,25,35,45,55,65,100))
+> summary(acs2017_ny$age_bands <- cut(acs2017_ny$AGE,breaks=c(0,25,35,45,55,65,100)))
+  (0,25]  (25,35]  (35,45]  (45,55]  (55,65] (65,100] 
+   56653    24794    22988    27153    28669    34581 
+    NA's 
+    1747 
+ table(acs2017_ny$age_bands,acs2017_ny$LABFORCE)
+          
+               0     1     2
+  (0,25]   31680 11717 13256
+  (25,35]      0  4271 20523
+  (35,45]      0  4064 18924
+  (45,55]      0  5406 21747
+  (55,65]      0 10563 18106
+  (65,100]     0 28701  5880
+  
+  > pick_use1 <- (acs2017_ny$AGE >25) & (acs2017_ny$AGE <= 55)
+> summary(pick_use1 <- (acs2017_ny$AGE >25) & (acs2017_ny$AGE <= 55))
+   Mode   FALSE    TRUE 
+logical  121650   74935
+
+dat_use1 <- subset(acs2017_ny, pick_use1)
+> summary(dat_use1 <- subset(acs2017_ny, pick_use1)
++ )
+      AGE            female         educ_nohs      
+ Min.   :26.00   Min.   :0.0000   Min.   :0.00000  
+ 1st Qu.:33.00   1st Qu.:0.0000   1st Qu.:0.00000  
+ Median :41.00   Median :1.0000   Median :0.00000  
+ Mean   :40.86   Mean   :0.5121   Mean   :0.08411  
+ 3rd Qu.:49.00   3rd Qu.:1.0000   3rd Qu.:0.00000  
+ Max.   :55.00   Max.   :1.0000   Max.   :1.00000  
+                                                   
+    educ_hs       educ_somecoll     educ_college  
+ Min.   :0.0000   Min.   :0.0000   Min.   :0.000  
+ 1st Qu.:0.0000   1st Qu.:0.0000   1st Qu.:0.000  
+ Median :0.0000   Median :0.0000   Median :0.000  
+ Mean   :0.2982   Mean   :0.2052   Mean   :0.235  
+ 3rd Qu.:1.0000   3rd Qu.:0.0000   3rd Qu.:0.000  
+ Max.   :1.0000   Max.   :1.0000   Max.   :1.000  
+                                                  
+  educ_advdeg                   SCHOOL     
+ Min.   :0.0000   N/A              :    0  
+ 1st Qu.:0.0000   No, not in school:70851  
+ Median :0.0000   Yes, in school   : 4084  
+ Mean   :0.1775   Missing          :    0  
+ 3rd Qu.:0.0000                            
+ Max.   :1.0000                            
+                                           
+                  EDUC      
+ Grade 12           :22349  
+ 4 years of college :17606  
+ 5+ years of college:13302  
+ 1 year of college  : 7947  
+ 2 years of college : 7428  
+ Grade 5, 6, 7, or 8: 1537  
+ (Other)            : 4766  
+                                          EDUCD      
+ Bachelor's degree                           :17606  
+ Regular high school diploma                 :13670  
+ Master's degree                             : 9854  
+ 1 or more years of college credit, no degree: 7947  
+ Associate's degree, type not specified      : 7428  
+ Some college, but less than 1 year          : 3656  
+ (Other)                                     :14774  
+                                     DEGFIELD    
+ N/A                                     :44027  
+ Business                                : 6158  
+ Education Administration and Teaching   : 2876  
+ Social Sciences                         : 2856  
+ Fine Arts                               : 2201  
+ Medical and Health Sciences and Services: 2033  
+ (Other)                                 :14784  
+                                  DEGFIELDD    
+ N/A                                   :44027  
+ Psychology                            : 1769  
+ Business Management and Administration: 1514  
+ Accounting                            : 1301  
+ English Language and Literature       : 1159  
+ General Business                      : 1120  
+ (Other)                               :24045  
+                                 DEGFIELD2    
+ N/A                                  :71134  
+ Business                             :  646  
+ Social Sciences                      :  515  
+ Education Administration and Teaching:  320  
+ Fine Arts                            :  292  
+ Communications                       :  242  
+ (Other)                              : 1786  
+                                                           DEGFIELD2D   
+ N/A                                                            :71134  
+ Psychology                                                     :  157  
+ Economics                                                      :  157  
+ Political Science and Government                               :  155  
+ Business Management and Administration                         :  144  
+ French, German, Latin and Other Common Foreign Language Studies:  133  
+ (Other)                                                        : 3055  
+      PUMA            GQ           OWNERSHP    
+ Min.   : 100   Min.   :1.000   Min.   :0.000  
+ 1st Qu.:1700   1st Qu.:1.000   1st Qu.:1.000  
+ Median :3207   Median :1.000   Median :1.000  
+ Mean   :2804   Mean   :1.103   Mean   :1.334  
+ 3rd Qu.:4003   3rd Qu.:1.000   3rd Qu.:2.000  
+ Max.   :4114   Max.   :5.000   Max.   :2.000  
+                                               
+   OWNERSHPD       MORTGAGE        OWNCOST     
+ Min.   : 0.0   Min.   :0.000   Min.   :    0  
+ 1st Qu.:13.0   1st Qu.:0.000   1st Qu.: 1467  
+ Median :13.0   Median :1.000   Median : 3392  
+ Mean   :15.7   Mean   :1.488   Mean   :42212  
+ 3rd Qu.:22.0   3rd Qu.:3.000   3rd Qu.:99999  
+ Max.   :22.0   Max.   :4.000   Max.   :99999  
+                                               
+      RENT           COSTELEC       COSTGAS    
+ Min.   :   0.0   Min.   :   0   Min.   :   0  
+ 1st Qu.:   0.0   1st Qu.: 960   1st Qu.: 840  
+ Median :   0.0   Median :1560   Median :2880  
+ Mean   : 503.4   Mean   :2316   Mean   :5164  
+ 3rd Qu.: 940.0   3rd Qu.:2520   3rd Qu.:9993  
+ Max.   :3800.0   Max.   :9997   Max.   :9997  
+                                               
+    COSTWATR       COSTFUEL       HHINCOME      
+ Min.   :   0   Min.   :   0   Min.   : -11800  
+ 1st Qu.: 400   1st Qu.:9993   1st Qu.:  50200  
+ Median :3300   Median :9993   Median :  93000  
+ Mean   :5230   Mean   :8205   Mean   : 124441  
+ 3rd Qu.:9993   3rd Qu.:9993   3rd Qu.: 152000  
+ Max.   :9997   Max.   :9997   Max.   :2030000  
+                               NA's   :2851     
+    FOODSTMP        LINGISOL         ROOMS       
+ Min.   :1.000   Min.   :0.000   Min.   : 0.000  
+ 1st Qu.:1.000   1st Qu.:1.000   1st Qu.: 4.000  
+ Median :1.000   Median :1.000   Median : 6.000  
+ Mean   :1.138   Mean   :1.018   Mean   : 5.784  
+ 3rd Qu.:1.000   3rd Qu.:1.000   3rd Qu.: 7.000  
+ Max.   :2.000   Max.   :2.000   Max.   :16.000  
+                                                 
+    BUILTYR2         UNITSSTR         FUELHEAT    
+ Min.   : 0.000   Min.   : 0.000   Min.   :0.000  
+ 1st Qu.: 1.000   1st Qu.: 3.000   1st Qu.:2.000  
+ Median : 3.000   Median : 3.000   Median :2.000  
+ Mean   : 3.826   Mean   : 4.648   Mean   :2.976  
+ 3rd Qu.: 5.000   3rd Qu.: 6.000   3rd Qu.:4.000  
+ Max.   :22.000   Max.   :10.000   Max.   :9.000  
+                                                  
+      SSMC            FAMSIZE           NCHILD     
+ Min.   :0.00000   Min.   : 1.000   Min.   :0.000  
+ 1st Qu.:0.00000   1st Qu.: 2.000   1st Qu.:0.000  
+ Median :0.00000   Median : 3.000   Median :1.000  
+ Mean   :0.01499   Mean   : 3.126   Mean   :1.006  
+ 3rd Qu.:0.00000   3rd Qu.: 4.000   3rd Qu.:2.000  
+ Max.   :2.00000   Max.   :19.000   Max.   :9.000  
+                                                   
+     NCHLT5           RELATE          RELATED      
+ Min.   :0.0000   Min.   : 1.000   Min.   : 101.0  
+ 1st Qu.:0.0000   1st Qu.: 1.000   1st Qu.: 101.0  
+ Median :0.0000   Median : 2.000   Median : 201.0  
+ Mean   :0.2024   Mean   : 3.034   Mean   : 307.9  
+ 3rd Qu.:0.0000   3rd Qu.: 3.000   3rd Qu.: 301.0  
+ Max.   :5.0000   Max.   :13.000   Max.   :1301.0  
+                                                   
+                    MARST            RACE     
+ married spouse present:38924   Min.   :1.00  
+ married spouse absent : 2342   1st Qu.:1.00  
+ separated             : 2052   Median :1.00  
+ divorced              : 6370   Mean   :2.13  
+ widowed               :  639   3rd Qu.:2.00  
+ never married         :24608   Max.   :9.00  
+                                              
+     RACED           HISPAN         HISPAND      
+ Min.   :100.0   Min.   :0.000   Min.   :  0.00  
+ 1st Qu.:100.0   1st Qu.:0.000   1st Qu.:  0.00  
+ Median :100.0   Median :0.000   Median :  0.00  
+ Mean   :215.2   Mean   :0.457   Mean   : 49.17  
+ 3rd Qu.:200.0   3rd Qu.:0.000   3rd Qu.:  0.00  
+ Max.   :990.0   Max.   :4.000   Max.   :498.00  
+                                                 
+            BPL                        BPLD      
+ New York     :43188   New York          :43188  
+ West Indies  : 4092   China             : 2092  
+ SOUTH AMERICA: 2655   Dominican Republic: 1812  
+ China        : 2530   New Jersey        : 1298  
+ India        : 1917   Pennsylvania      : 1201  
+ New Jersey   : 1298   Mexico            : 1091  
+ (Other)      :19255   (Other)           :24253  
+                     ANCESTR1    
+ Not Reported            :11774  
+ Italian                 : 7525  
+ Irish, various subheads,: 5965  
+ German                  : 4695  
+ African-American        : 3765  
+ Chinese                 : 2555  
+ (Other)                 :38656  
+                                   ANCESTR1D    
+ Not Reported                           :11774  
+ Italian (1990-2000, ACS, PRCS)         : 7525  
+ Irish                                  : 5679  
+ German (1990-2000, ACS/PRCS)           : 4641  
+ African-American (1990-2000, ACS, PRCS): 3765  
+ Chinese                                : 2555  
+ (Other)                                :38996  
+         ANCESTR2    
+ Not Reported:54459  
+ Irish       : 3561  
+ German      : 3553  
+ English     : 1712  
+ Italian     : 1637  
+ Polish      : 1249  
+ (Other)     : 8764  
+                          ANCESTR2D        CITIZEN      
+ Not Reported                  :54459   Min.   :0.0000  
+ German (1990-2000, ACS, PRCS) : 3541   1st Qu.:0.0000  
+ Irish                         : 3403   Median :0.0000  
+ English                       : 1712   Mean   :0.6582  
+ Italian (1990-2000, ACS, PRCS): 1637   3rd Qu.:2.0000  
+ Polish                        : 1249   Max.   :3.0000  
+ (Other)                       : 8934                   
+    YRSUSA1          HCOVANY         HCOVPRIV    
+ Min.   : 0.000   Min.   :1.000   Min.   :1.000  
+ 1st Qu.: 0.000   1st Qu.:2.000   1st Qu.:1.000  
+ Median : 0.000   Median :2.000   Median :2.000  
+ Mean   : 5.522   Mean   :1.923   Mean   :1.721  
+ 3rd Qu.: 5.000   3rd Qu.:2.000   3rd Qu.:2.000  
+ Max.   :56.000   Max.   :2.000   Max.   :2.000  
+                                                 
+     SEX           EMPSTAT         EMPSTATD    
+ Male  :36558   Min.   :1.000   Min.   :10.00  
+ Female:38377   1st Qu.:1.000   1st Qu.:10.00  
+                Median :1.000   Median :10.00  
+                Mean   :1.402   Mean   :14.06  
+                3rd Qu.:1.000   3rd Qu.:10.00  
+                Max.   :3.000   Max.   :30.00  
+                                               
+    LABFORCE          OCC             IND       
+ Min.   :1.000   0      : 8846   0      : 8846  
+ 1st Qu.:2.000   2310   : 2408   7860   : 5304  
+ Median :2.000   430    : 1900   770    : 4010  
+ Mean   :1.817   5700   : 1649   8190   : 3539  
+ 3rd Qu.:2.000   3600   : 1449   8680   : 3103  
+ Max.   :2.000   3255   : 1328   7870   : 1926  
+                 (Other):57355   (Other):48207  
+    CLASSWKR       CLASSWKRD        WKSWORK2    
+ Min.   :0.000   Min.   : 0.00   Min.   :0.000  
+ 1st Qu.:2.000   1st Qu.:22.00   1st Qu.:3.000  
+ Median :2.000   Median :22.00   Median :6.000  
+ Mean   :1.666   Mean   :19.44   Mean   :4.493  
+ 3rd Qu.:2.000   3rd Qu.:22.00   3rd Qu.:6.000  
+ Max.   :2.000   Max.   :29.00   Max.   :6.000  
+                                                
+    UHRSWORK         INCTOT           FTOTINC       
+ Min.   : 0.00   Min.   :  -5900   Min.   : -11800  
+ 1st Qu.:25.00   1st Qu.:  13500   1st Qu.:  41043  
+ Median :40.00   Median :  37000   Median :  81200  
+ Mean   :33.18   Mean   :  55556   Mean   : 113387  
+ 3rd Qu.:40.00   3rd Qu.:  70000   3rd Qu.: 140100  
+ Max.   :99.00   Max.   :1378000   Max.   :2030000  
+                                   NA's   :2851     
+    INCWAGE          POVERTY         MIGRATE1    
+ Min.   :     0   Min.   :  0.0   Min.   :1.000  
+ 1st Qu.:  5000   1st Qu.:196.0   1st Qu.:1.000  
+ Median : 34000   Median :396.0   Median :1.000  
+ Mean   : 50236   Mean   :340.6   Mean   :1.147  
+ 3rd Qu.: 65000   3rd Qu.:501.0   3rd Qu.:1.000  
+ Max.   :638000   Max.   :501.0   Max.   :4.000  
+                                                 
+   MIGRATE1D        MIGPLAC1         MIGCOUNTY1     
+ Min.   :10.00   Min.   :  0.000   Min.   :  0.000  
+ 1st Qu.:10.00   1st Qu.:  0.000   1st Qu.:  0.000  
+ Median :10.00   Median :  0.000   Median :  0.000  
+ Mean   :11.82   Mean   :  6.942   Mean   :  4.908  
+ 3rd Qu.:10.00   3rd Qu.:  0.000   3rd Qu.:  0.000  
+ Max.   :40.00   Max.   :900.000   Max.   :810.000  
+                                                    
+    MIGPUMA1          VETSTAT         VETSTATD    
+ Min.   :    0.0   Min.   :1.000   Min.   :11.00  
+ 1st Qu.:    0.0   1st Qu.:1.000   1st Qu.:11.00  
+ Median :    0.0   Median :1.000   Median :11.00  
+ Mean   :  328.8   Mean   :1.027   Mean   :11.25  
+ 3rd Qu.:    0.0   3rd Qu.:1.000   3rd Qu.:11.00  
+ Max.   :70100.0   Max.   :2.000   Max.   :20.00  
+                                                  
+    PWPUMA00        TRANWORK     TRANTIME     
+ Min.   :    0   Min.   : 0   Min.   :  0.00  
+ 1st Qu.:  200   1st Qu.:10   1st Qu.:  0.00  
+ Median : 2400   Median :10   Median : 20.00  
+ Mean   : 2111   Mean   :16   Mean   : 25.26  
+ 3rd Qu.: 3800   3rd Qu.:31   3rd Qu.: 40.00  
+ Max.   :59300   Max.   :70   Max.   :138.00  
+                                              
+    DEPARTS           in_NYC         in_Bronx      
+ Min.   :   0.0   Min.   :0.000   Min.   :0.00000  
+ 1st Qu.:   0.0   1st Qu.:0.000   1st Qu.:0.00000  
+ Median : 702.0   Median :0.000   Median :0.00000  
+ Mean   : 605.8   Mean   :0.404   Mean   :0.05497  
+ 3rd Qu.: 802.0   3rd Qu.:1.000   3rd Qu.:0.00000  
+ Max.   :2345.0   Max.   :1.000   Max.   :1.00000  
+                                                   
+  in_Manhattan       in_StatenI       in_Brooklyn    
+ Min.   :0.00000   Min.   :0.00000   Min.   :0.0000  
+ 1st Qu.:0.00000   1st Qu.:0.00000   1st Qu.:0.0000  
+ Median :0.00000   Median :0.00000   Median :0.0000  
+ Mean   :0.05996   Mean   :0.02098   Mean   :0.1438  
+ 3rd Qu.:0.00000   3rd Qu.:0.00000   3rd Qu.:0.0000  
+ Max.   :1.00000   Max.   :1.00000   Max.   :1.0000  
+                                                     
+   in_Queens      in_Westchester      in_Nassau     
+ Min.   :0.0000   Min.   :0.00000   Min.   :0.0000  
+ 1st Qu.:0.0000   1st Qu.:0.00000   1st Qu.:0.0000  
+ Median :0.0000   Median :0.00000   Median :0.0000  
+ Mean   :0.1243   Mean   :0.04389   Mean   :0.0659  
+ 3rd Qu.:0.0000   3rd Qu.:0.00000   3rd Qu.:0.0000  
+ Max.   :1.0000   Max.   :1.00000   Max.   :1.0000  
+                                                    
+    Hispanic         Hisp_Mex          Hisp_PR       
+ Min.   :0.0000   Min.   :0.00000   Min.   :0.00000  
+ 1st Qu.:0.0000   1st Qu.:0.00000   1st Qu.:0.00000  
+ Median :0.0000   Median :0.00000   Median :0.00000  
+ Mean   :0.1523   Mean   :0.01991   Mean   :0.04449  
+ 3rd Qu.:0.0000   3rd Qu.:0.00000   3rd Qu.:0.00000  
+ Max.   :1.0000   Max.   :1.00000   Max.   :1.00000  
+                                                     
+   Hisp_Cuban         Hisp_DomR           white       
+ Min.   :0.000000   Min.   :0.00000   Min.   :0.0000  
+ 1st Qu.:0.000000   1st Qu.:0.00000   1st Qu.:0.0000  
+ Median :0.000000   Median :0.00000   Median :1.0000  
+ Mean   :0.003363   Mean   :0.03036   Mean   :0.6714  
+ 3rd Qu.:0.000000   3rd Qu.:0.00000   3rd Qu.:1.0000  
+ Max.   :1.000000   Max.   :1.00000   Max.   :1.0000  
+                                                      
+      AfAm           Amindian            Asian      
+ Min.   :0.0000   Min.   :0.000000   Min.   :0.000  
+ 1st Qu.:0.0000   1st Qu.:0.000000   1st Qu.:0.000  
+ Median :0.0000   Median :0.000000   Median :0.000  
+ Mean   :0.1325   Mean   :0.004164   Mean   :0.102  
+ 3rd Qu.:0.0000   3rd Qu.:0.000000   3rd Qu.:0.000  
+ Max.   :1.0000   Max.   :1.000000   Max.   :1.000  
+                                                    
+    race_oth        unmarried         veteran       
+ Min.   :0.0000   Min.   :0.0000   Min.   :0.00000  
+ 1st Qu.:0.0000   1st Qu.:0.0000   1st Qu.:0.00000  
+ Median :0.0000   Median :0.0000   Median :0.00000  
+ Mean   :0.1464   Mean   :0.3284   Mean   :0.02665  
+ 3rd Qu.:0.0000   3rd Qu.:1.0000   3rd Qu.:0.00000  
+ Max.   :1.0000   Max.   :1.0000   Max.   :1.00000  
+                                                    
+ has_AnyHealthIns has_PvtHealthIns  Commute_car   
+ Min.   :0.0000   Min.   :0.0000   Min.   :0.000  
+ 1st Qu.:1.0000   1st Qu.:0.0000   1st Qu.:0.000  
+ Median :1.0000   Median :1.0000   Median :0.000  
+ Mean   :0.9228   Mean   :0.7212   Mean   :0.485  
+ 3rd Qu.:1.0000   3rd Qu.:1.0000   3rd Qu.:1.000  
+ Max.   :1.0000   Max.   :1.0000   Max.   :1.000  
+                                                  
+  Commute_bus      Commute_subway    Commute_rail    
+ Min.   :0.00000   Min.   :0.0000   Min.   :0.00000  
+ 1st Qu.:0.00000   1st Qu.:0.0000   1st Qu.:0.00000  
+ Median :0.00000   Median :0.0000   Median :0.00000  
+ Mean   :0.03398   Mean   :0.1386   Mean   :0.02371  
+ 3rd Qu.:0.00000   3rd Qu.:0.0000   3rd Qu.:0.00000  
+ Max.   :1.00000   Max.   :1.0000   Max.   :1.00000  
+                                                     
+ Commute_other     below_povertyline below_150poverty
+ Min.   :0.00000   Min.   :0.000     Min.   :0.0000  
+ 1st Qu.:0.00000   1st Qu.:0.000     1st Qu.:0.0000  
+ Median :0.00000   Median :0.000     Median :0.0000  
+ Mean   :0.08306   Mean   :0.111     Mean   :0.1764  
+ 3rd Qu.:0.00000   3rd Qu.:0.000     3rd Qu.:0.0000  
+ Max.   :1.00000   Max.   :1.000     Max.   :1.0000  
+                                                     
+ below_200poverty   foodstamps        age_bands    
+ Min.   :0.0000   Min.   :0.0000   (0,25]  :    0  
+ 1st Qu.:0.0000   1st Qu.:0.0000   (25,35] :24794  
+ Median :0.0000   Median :0.0000   (35,45] :22988  
+ Mean   :0.2417   Mean   :0.1381   (45,55] :27153  
+ 3rd Qu.:0.0000   3rd Qu.:0.0000   (55,65] :    0  
+ Max.   :1.0000   Max.   :1.0000   (65,100]:    0  
+ 
+ model_logit1 <- glm(LABFORCE ~ AGE + I(AGE^2) + female + AfAm + Asian + race_oth + Hispanic + educ_hs + educ_somecoll + educ_college + educ_advdeg + MARST)
+> summary(model_logit1)
+
+Call:
+glm(formula = LABFORCE ~ AGE + I(AGE^2) + female + AfAm + Asian + 
+    race_oth + Hispanic + educ_hs + educ_somecoll + educ_college + 
+    educ_advdeg + MARST)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-1.1866  -0.3537   0.1059   0.2722   2.2562  
+
+Coefficients:
+                Estimate Std. Error  t value Pr(>|t|)    
+(Intercept)   -2.364e-01  5.156e-03  -45.863  < 2e-16 ***
+AGE            6.461e-02  2.202e-04  293.349  < 2e-16 ***
+I(AGE^2)      -6.803e-04  2.250e-06 -302.367  < 2e-16 ***
+female        -5.039e-02  1.985e-03  -25.383  < 2e-16 ***
+AfAm          -6.178e-03  3.078e-03   -2.007  0.04470 *  
+Asian          1.070e-02  4.002e-03    2.673  0.00753 ** 
+race_oth       9.906e-03  3.554e-03    2.787  0.00532 ** 
+Hispanic       6.127e-02  3.266e-03   18.758  < 2e-16 ***
+educ_hs        5.109e-01  3.411e-03  149.752  < 2e-16 ***
+educ_somecoll  5.856e-01  3.693e-03  158.563  < 2e-16 ***
+educ_college   6.599e-01  3.853e-03  171.283  < 2e-16 ***
+educ_advdeg    6.515e-01  4.203e-03  154.993  < 2e-16 ***
+MARST          5.809e-03  5.506e-04   10.551  < 2e-16 ***
+---
+Signif. codes:  
+0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for gaussian family taken to be 0.1922308)
+
+    Null deviance: 110365  on 196584  degrees of freedom
+Residual deviance:  37787  on 196572  degrees of freedom
+AIC: 233719
+
+Number of Fisher Scoring iterations: 2
+
+table(acs2017_ny$EMPSTAT,acs2017_ny$LABFORCE)
+   
+        0     1     2
+  0 33427     0     0
+  1     0     0 93482
+  2     0     0  4954
+  3     0 64722     0
+
+table(acs2017_ny$EMPSTAT,acs2017_ny$CLASSWKR)
+   
+        0     1     2
+  0 33427     0     0
+  1     0  9410 84072
+  2  1026   394  3534
+  3 46560  2021 16141
+  
+  confint(odel_v3, level = 0.95)
+                 2.5 %     97.5 %
+(Intercept) 41434.5835 43159.0358
+AGE          -191.8345  -158.8207
+
+3) My friend and myself will probably work on health insurance coverage in our reserch paper. we will be able to furnish more details by the next homework.
