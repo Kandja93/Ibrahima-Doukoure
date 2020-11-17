@@ -1,0 +1,703 @@
+LAB 7
+1) Names of study group
+Ibrahima Doukoure & Alain Brou
+
+2) Results of Lab
+We are working on NHIS 2014 data
+
+We starting by loading and attaching the file
+load("C:/Users/owner/AppData/Local/Temp/NHIS_2014_lshIRE")
+
+summary(data_use1)
+     NOTCOV         educ_nohs         educ_hs      
+ Min.   :0.0000   Min.   :0.0000   Min.   :0.0000  
+ 1st Qu.:0.0000   1st Qu.:0.0000   1st Qu.:0.0000  
+ Median :0.0000   Median :0.0000   Median :0.0000  
+ Mean   :0.1229   Mean   :0.2783   Mean   :0.2035  
+ 3rd Qu.:0.0000   3rd Qu.:1.0000   3rd Qu.:0.0000  
+ Max.   :1.0000   Max.   :1.0000   Max.   :1.0000  
+                                                   
+  educ_smcoll        educ_as         educ_bach     
+ Min.   :0.0000   Min.   :0.0000   Min.   :0.0000  
+ 1st Qu.:0.0000   1st Qu.:0.0000   1st Qu.:0.0000  
+ Median :0.0000   Median :0.0000   Median :0.0000  
+ Mean   :0.1416   Mean   :0.0796   Mean   :0.1283  
+ 3rd Qu.:0.0000   3rd Qu.:0.0000   3rd Qu.:0.0000  
+ Max.   :1.0000   Max.   :1.0000   Max.   :1.0000  
+                                                   
+    educ_adv          AGE_P           female     
+ Min.   :0.0000   Min.   : 0.00   Min.   :0.000  
+ 1st Qu.:0.0000   1st Qu.:17.00   1st Qu.:0.000  
+ Median :0.0000   Median :37.00   Median :1.000  
+ Mean   :0.0724   Mean   :37.42   Mean   :0.517  
+ 3rd Qu.:0.0000   3rd Qu.:55.00   3rd Qu.:1.000  
+ Max.   :1.0000   Max.   :85.00   Max.   :1.000  
+                                                 
+      AfAm            Asian           RaceOther      
+ Min.   :0.0000   Min.   :0.00000   Min.   :0.00000  
+ 1st Qu.:0.0000   1st Qu.:0.00000   1st Qu.:0.00000  
+ Median :0.0000   Median :0.00000   Median :0.00000  
+ Mean   :0.1464   Mean   :0.06964   Mean   :0.01944  
+ 3rd Qu.:0.0000   3rd Qu.:0.00000   3rd Qu.:0.00000  
+ Max.   :1.0000   Max.   :1.00000   Max.   :1.00000  
+                                                     
+    Hispanic        Hispan_PR   Hispan_Mex   Hispan_DR
+ Min.   :0.0000   Min.   :0   Min.   :0    Min.   :0  
+ 1st Qu.:0.0000   1st Qu.:0   1st Qu.:0    1st Qu.:0  
+ Median :0.0000   Median :0   Median :0    Median :0  
+ Mean   :0.2223   Mean   :0   Mean   :0    Mean   :0  
+ 3rd Qu.:0.0000   3rd Qu.:0   3rd Qu.:0    3rd Qu.:0  
+ Max.   :1.0000   Max.   :0   Max.   :0    Max.   :0  
+                                                      
+    married          widowed          divorc_sep     
+ Min.   :0.0000   Min.   :0.00000   Min.   :0.00000  
+ 1st Qu.:0.0000   1st Qu.:0.00000   1st Qu.:0.00000  
+ Median :0.0000   Median :0.00000   Median :0.00000  
+ Mean   :0.4037   Mean   :0.04343   Mean   :0.08159  
+ 3rd Qu.:1.0000   3rd Qu.:0.00000   3rd Qu.:0.00000  
+ Max.   :1.0000   Max.   :1.00000   Max.   :1.00000  
+                                                     
+       REGION        borninUSA     
+ Northeast:17943   Min.   :0.0000  
+ Midwest  :22448   1st Qu.:1.0000  
+ South    :38829   Median :1.0000  
+ West     :32833   Mean   :0.8287  
+                   3rd Qu.:1.0000  
+                   Max.   :1.0000  
+                                   
+             region_born     veteran_stat    inworkforce   
+ US                :92859   Min.   :0.000   Min.   :0.000  
+ Mex Cent Am Caribb:10015   1st Qu.:0.000   1st Qu.:0.000  
+ SE Asia           : 2093   Median :0.000   Median :1.000  
+ Eur               : 1359   Mean   :0.091   Mean   :0.659  
+ Asia              : 1313   3rd Qu.:0.000   3rd Qu.:1.000  
+ India subc        : 1175   Max.   :1.000   Max.   :1.000  
+ (Other)           : 3239   NA's   :28114   NA's   :28114  
+    ERNYR_P       disabl_limit    person_healthstatus
+ Min.   : 1.00   Min.   :0.0000   Excellent:39896    
+ 1st Qu.: 5.00   1st Qu.:0.0000   Very good:33106    
+ Median : 7.00   Median :0.0000   Good     :27524    
+ Mean   :27.08   Mean   :0.1326   Fair     : 8830    
+ 3rd Qu.:11.00   3rd Qu.:0.0000   Poor     : 2551    
+ Max.   :99.00   Max.   :1.0000   Refused  :   83    
+ NA's   :57213                    (Other)  :   63    
+    MEDICARE         MEDICAID       private_ins    
+ Min.   :0.0000   Min.   :0.0000   Min.   :0.0000  
+ 1st Qu.:0.0000   1st Qu.:0.0000   1st Qu.:0.0000  
+ Median :0.0000   Median :0.0000   Median :1.0000  
+ Mean   :0.1517   Mean   :0.1762   Mean   :0.5784  
+ 3rd Qu.:0.0000   3rd Qu.:0.0000   3rd Qu.:1.0000  
+ Max.   :1.0000   Max.   :1.0000   Max.   :1.0000  
+                                                   
+      RRP              HHX             FMX        
+ Min.   : 1.000   Min.   :    4   Min.   : 1.000  
+ 1st Qu.: 1.000   1st Qu.:22046   1st Qu.: 1.000  
+ Median : 2.000   Median :43263   Median : 1.000  
+ Mean   : 2.884   Mean   :43238   Mean   : 1.015  
+ 3rd Qu.: 4.000   3rd Qu.:64228   3rd Qu.: 1.000  
+ Max.   :98.000   Max.   :86667   Max.   :10.000  
+                                                  
+      FPX             SCHIP            sptn_medical  
+ Min.   : 1.000   Min.   :0.00000   under 500:37443  
+ 1st Qu.: 1.000   1st Qu.:0.00000   500-1999 :32487  
+ Median : 2.000   Median :0.00000   zero     :14738  
+ Mean   : 2.182   Mean   :0.01324   2000-2999:10440  
+ 3rd Qu.: 3.000   3rd Qu.:0.00000   5000+    : 6968  
+ Max.   :16.000   Max.   :1.00000   (Other)  : 7400  
+                                    NA's     : 2577  
+the Summary of the data teaches us many things but we are more interested in medicaire, medicaid, ... health insurance
+
+data_use1$earn_lastyr <- as.factor(data_use1$ERNYR_P)
+> summary(data_use1$earn_lastyr <- as.factor(data_use1$ERNYR_P))
+    1     2     3     4     5     6     7     8     9    10 
+ 2999  2892  3581  3211  3714  6213  5022  3884  2670  2028 
+   11    97    98    99  NA's 
+ 6202  6066    26  6332 57213 
+ 
+ levels(data_use1$earn_lastyr) <- c("0","$01-$4999","$5000-$9999","$10000-$14999","$15000-$19999","$20000-$24999","$25000-$34999","$35000-$44999","$45000-$54999","$55000-$64999","$65000-$74999","$75000 and over",NA,NA,NA)
+> summary(levels(data_use1$earn_lastyr) <- c("0","$01-$4999","$5000-$9999","$10000-$14999","$15000-$19999","$20000-$24999","$25000-$34999","$35000-$44999","$45000-$54999","$55000-$64999","$65000-$74999","$75000 and over",NA,NA,NA))
+   Length     Class      Mode 
+       15 character character 
+ 
+ model_logit1 <- glm(NOTCOV ~ AGE_P + I(AGE_P^2) + female + AfAm + Asian + RaceOther  
+                    + Hispanic + educ_hs + educ_smcoll + educ_as + educ_bach + educ_adv 
+                    + married + widowed + divorc_sep + veteran_stat + REGION + region_born,
+                    family = binomial, data = data_use1)
+
+summary(model_logit1)
+
+Call:
+glm(formula = NOTCOV ~ AGE_P + I(AGE_P^2) + female + AfAm + Asian + 
+    RaceOther + Hispanic + educ_hs + educ_smcoll + educ_as + 
+    educ_bach + educ_adv + married + widowed + divorc_sep + veteran_stat + 
+    REGION + region_born, family = binomial, data = data_use1)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-1.9059  -0.5737  -0.3527  -0.1426   3.4876  
+
+Coefficients:
+                                Estimate Std. Error z value
+(Intercept)                   -3.483e+00  1.012e-01 -34.409
+AGE_P                          1.460e-01  4.917e-03  29.690
+I(AGE_P^2)                    -2.037e-03  5.737e-05 -35.515
+female                        -2.798e-01  2.213e-02 -12.642
+AfAm                          -1.428e-01  3.295e-02  -4.333
+Asian                         -2.090e-01  7.502e-02  -2.786
+RaceOther                      5.161e-01  6.624e-02   7.791
+Hispanic                       3.190e-01  3.453e-02   9.237
+educ_hs                       -2.247e-01  2.981e-02  -7.538
+educ_smcoll                   -6.324e-01  3.460e-02 -18.277
+educ_as                       -7.535e-01  4.267e-02 -17.660
+educ_bach                     -1.446e+00  4.374e-02 -33.070
+educ_adv                      -2.092e+00  7.157e-02 -29.235
+married                       -6.713e-01  2.747e-02 -24.438
+widowed                       -7.285e-02  8.427e-02  -0.864
+divorc_sep                    -4.546e-02  3.885e-02  -1.170
+veteran_stat                  -5.741e-01  5.930e-02  -9.681
+REGIONMidwest                  2.897e-01  4.063e-02   7.130
+REGIONSouth                    6.938e-01  3.517e-02  19.727
+REGIONWest                     2.898e-01  3.715e-02   7.803
+region_bornMex Cent Am Caribb  1.073e+00  3.845e-02  27.903
+region_bornS Am                9.640e-01  8.485e-02  11.361
+region_bornEur                 3.725e-01  1.019e-01   3.656
+region_bornformer USSR         9.614e-01  2.056e-01   4.677
+region_bornAfrica              8.256e-01  1.088e-01   7.584
+region_bornMidE                4.308e-01  1.752e-01   2.459
+region_bornIndia subc          8.892e-01  1.207e-01   7.367
+region_bornAsia                9.269e-01  1.128e-01   8.215
+region_bornSE Asia             4.657e-01  1.038e-01   4.486
+region_bornElsewhere           2.846e-01  1.625e-01   1.751
+region_bornunknown            -1.024e-01  1.910e-01  -0.536
+                              Pr(>|z|)    
+(Intercept)                    < 2e-16 ***
+AGE_P                          < 2e-16 ***
+I(AGE_P^2)                     < 2e-16 ***
+female                         < 2e-16 ***
+AfAm                          1.47e-05 ***
+Asian                         0.005334 ** 
+RaceOther                     6.63e-15 ***
+Hispanic                       < 2e-16 ***
+educ_hs                       4.78e-14 ***
+educ_smcoll                    < 2e-16 ***
+educ_as                        < 2e-16 ***
+educ_bach                      < 2e-16 ***
+educ_adv                       < 2e-16 ***
+married                        < 2e-16 ***
+widowed                       0.387338    
+divorc_sep                    0.241889    
+veteran_stat                   < 2e-16 ***
+REGIONMidwest                 1.00e-12 ***
+REGIONSouth                    < 2e-16 ***
+REGIONWest                    6.07e-15 ***
+region_bornMex Cent Am Caribb  < 2e-16 ***
+region_bornS Am                < 2e-16 ***
+region_bornEur                0.000256 ***
+region_bornformer USSR        2.92e-06 ***
+region_bornAfrica             3.34e-14 ***
+region_bornMidE               0.013933 *  
+region_bornIndia subc         1.75e-13 ***
+region_bornAsia                < 2e-16 ***
+region_bornSE Asia            7.25e-06 ***
+region_bornElsewhere          0.079915 .  
+region_bornunknown            0.592122    
+---
+Signif. codes:  
+0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 69359  on 83938  degrees of freedom
+Residual deviance: 55821  on 83908  degrees of freedom
+  (28114 observations deleted due to missingness)
+AIC: 55883
+
+Number of Fisher Scoring iterations: 6
+d_region <- data.frame(model.matrix(~ data_use1$REGION))
+> summary(d_region <- data.frame(model.matrix(~ data_use1$REGION)))
+  X.Intercept. data_use1.REGIONMidwest
+ Min.   :1     Min.   :0.0000         
+ 1st Qu.:1     1st Qu.:0.0000         
+ Median :1     Median :0.0000         
+ Mean   :1     Mean   :0.2003         
+ 3rd Qu.:1     3rd Qu.:0.0000         
+ Max.   :1     Max.   :1.0000         
+ data_use1.REGIONSouth data_use1.REGIONWest
+ Min.   :0.0000        Min.   :0.000       
+ 1st Qu.:0.0000        1st Qu.:0.000       
+ Median :0.0000        Median :0.000       
+ Mean   :0.3465        Mean   :0.293       
+ 3rd Qu.:1.0000        3rd Qu.:1.000       
+ Max.   :1.0000        Max.   :1.000
+ 
+ d_region_born <- data.frame(model.matrix(~ factor(data_use1$region_born)))
+> summary(d_region_born <- data.frame(model.matrix(~ factor(data_use1$region_born)))
+
+analysis_sub <- data.frame(data_use1$NOTCOV)
+> summary(analysis_sub <- data.frame(data_use1$NOTCOV))        
+ data_use1.NOTCOV
+ Min.   :0.0000  
+ 1st Qu.:0.0000  
+ Median :0.0000  
+ Mean   :0.1229  
+ 3rd Qu.:0.0000  
+ Max.   :1.0000
+ dat_for_analysis_sub <- data.frame(data_use1$NOTCOV,data_use1$AGE_P,data_use1$female,data_use1$AfAm,data_use1$Asian,data_use1$RaceOther,data_use1$Hispanic,data_use1$educ_hs,data_use1$educ_smcoll,data_use1$educ_as,data_use1$educ_bach,data_use1$educ_adv,data_use1$married,data_use1$widowed,data_use1$divorc_sep,d_region[,2:4],d_region_born[,2:12])
+>         dat_for_analysis_sub <- data.frame(data_use1$NOTCOV,data_use1$AGE_P,data_use1$female,data_use1$AfAm,data_use1$Asian,data_use1$RaceOther,data_use1$Hispanic,data_use1$educ_hs,data_use1$educ_smcoll,data_use1$educ_as,data_use1$educ_bach,data_use1$educ_adv,data_use1$married,data_use1$widowed,data_use1$divorc_sep,d_region[,2:4],d_region_born[,2:12]))
+
+(dat_for_analysis_sub) <- c(NOTCOV,Age,female,AfAm,Asian,RaceOther,Hispanic,educ_hs,educ_smcoll,educ_as,educ_bach,educ_adv,married,widowed,divorc_sep,Region.Midwest,Region.South,Region.West,born.Mex.CentAm.Carib,born.S.Am,born.Eur,born.f.USSR,born.Africa,born.MidE,born.India.subc,born.Asia,born.SE.Asia,born.elsewhere,born.unknown)
+
+require(standardize)
+ set.seed(654321)
+> summary(set.seed(654321))
+Length  Class   Mode 
+     0   NULL   NULL
+NN <- length(dat_for_analysis_sub$NOTCOV)
+> summary(NN <- length(dat_for_analysis_sub$NOTCOV))
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+      0       0       0       0       0       0
+ restrict_1 <- (runif(NN) < 0.1) # use 10% as training data
+> summary(restrict_1)
+   Mode 
+logical 
+
+dat_train <- subset(dat_for_analysis_sub, restrict_1)
+> summary(dat_train <- subset(dat_for_analysis_sub, restrict_1))
+ data_use1.NOTCOV data_use1.AGE_P data_use1.female
+ Min.   : NA      Min.   : NA     Min.   : NA     
+ 1st Qu.: NA      1st Qu.: NA     1st Qu.: NA     
+ Median : NA      Median : NA     Median : NA     
+ Mean   :NaN      Mean   :NaN     Mean   :NaN     
+ 3rd Qu.: NA      3rd Qu.: NA     3rd Qu.: NA     
+ Max.   : NA      Max.   : NA     Max.   : NA     
+ data_use1.AfAm data_use1.Asian data_use1.RaceOther
+ Min.   : NA    Min.   : NA     Min.   : NA        
+ 1st Qu.: NA    1st Qu.: NA     1st Qu.: NA        
+ Median : NA    Median : NA     Median : NA        
+ Mean   :NaN    Mean   :NaN     Mean   :NaN        
+ 3rd Qu.: NA    3rd Qu.: NA     3rd Qu.: NA        
+ Max.   : NA    Max.   : NA     Max.   : NA        
+ data_use1.Hispanic data_use1.educ_hs data_use1.educ_smcoll
+ Min.   : NA        Min.   : NA       Min.   : NA          
+ 1st Qu.: NA        1st Qu.: NA       1st Qu.: NA          
+ Median : NA        Median : NA       Median : NA          
+ Mean   :NaN        Mean   :NaN       Mean   :NaN          
+ 3rd Qu.: NA        3rd Qu.: NA       3rd Qu.: NA          
+ Max.   : NA        Max.   : NA       Max.   : NA          
+ data_use1.educ_as data_use1.educ_bach data_use1.educ_adv
+ Min.   : NA       Min.   : NA         Min.   : NA       
+ 1st Qu.: NA       1st Qu.: NA         1st Qu.: NA       
+ Median : NA       Median : NA         Median : NA       
+ Mean   :NaN       Mean   :NaN         Mean   :NaN       
+ 3rd Qu.: NA       3rd Qu.: NA         3rd Qu.: NA       
+ Max.   : NA       Max.   : NA         Max.   : NA       
+ data_use1.married data_use1.widowed data_use1.divorc_sep
+ Min.   : NA       Min.   : NA       Min.   : NA         
+ 1st Qu.: NA       1st Qu.: NA       1st Qu.: NA         
+ Median : NA       Median : NA       Median : NA         
+ Mean   :NaN       Mean   :NaN       Mean   :NaN         
+ 3rd Qu.: NA       3rd Qu.: NA       3rd Qu.: NA         
+ Max.   : NA       Max.   : NA       Max.   : NA         
+ data_use1.REGIONMidwest data_use1.REGIONSouth
+ Min.   : NA             Min.   : NA          
+ 1st Qu.: NA             1st Qu.: NA          
+ Median : NA             Median : NA          
+ Mean   :NaN             Mean   :NaN          
+ 3rd Qu.: NA             3rd Qu.: NA          
+ Max.   : NA             Max.   : NA          
+ data_use1.REGIONWest
+ Min.   : NA         
+ 1st Qu.: NA         
+ Median : NA         
+ Mean   :NaN         
+ 3rd Qu.: NA         
+ Max.   : NA         
+ factor.data_use1.region_born.Mex.Cent.Am.Caribb
+ Min.   : NA                                    
+ 1st Qu.: NA                                    
+ Median : NA                                    
+ Mean   :NaN                                    
+ 3rd Qu.: NA                                    
+ Max.   : NA                                    
+ factor.data_use1.region_born.S.Am
+ Min.   : NA                      
+ 1st Qu.: NA                      
+ Median : NA                      
+ Mean   :NaN                      
+ 3rd Qu.: NA                      
+ Max.   : NA                      
+ factor.data_use1.region_born.Eur
+ Min.   : NA                     
+ 1st Qu.: NA                     
+ Median : NA                     
+ Mean   :NaN                     
+ 3rd Qu.: NA                     
+ Max.   : NA                     
+ factor.data_use1.region_born.former.USSR
+ Min.   : NA                             
+ 1st Qu.: NA                             
+ Median : NA                             
+ Mean   :NaN                             
+ 3rd Qu.: NA                             
+ Max.   : NA                             
+ factor.data_use1.region_born.Africa
+ Min.   : NA                        
+ 1st Qu.: NA                        
+ Median : NA                        
+ Mean   :NaN                        
+ 3rd Qu.: NA                        
+ Max.   : NA                        
+ factor.data_use1.region_born.MidE
+ Min.   : NA                      
+ 1st Qu.: NA                      
+ Median : NA                      
+ Mean   :NaN                      
+ 3rd Qu.: NA                      
+ Max.   : NA                      
+ factor.data_use1.region_born.India.subc
+ Min.   : NA                            
+ 1st Qu.: NA                            
+ Median : NA                            
+ Mean   :NaN                            
+ 3rd Qu.: NA                            
+ Max.   : NA                            
+ factor.data_use1.region_born.Asia
+ Min.   : NA                      
+ 1st Qu.: NA                      
+ Median : NA                      
+ Mean   :NaN                      
+ 3rd Qu.: NA                      
+ Max.   : NA                      
+ factor.data_use1.region_born.SE.Asia
+ Min.   : NA                         
+ 1st Qu.: NA                         
+ Median : NA                         
+ Mean   :NaN                         
+ 3rd Qu.: NA                         
+ Max.   : NA                         
+ factor.data_use1.region_born.Elsewhere
+ Min.   : NA                           
+ 1st Qu.: NA                           
+ Median : NA                           
+ Mean   :NaN                           
+ 3rd Qu.: NA                           
+ Max.   : NA                           
+ factor.data_use1.region_born.unknown
+ Min.   : NA                         
+ 1st Qu.: NA                         
+ Median : NA                         
+ Mean   :NaN                         
+ 3rd Qu.: NA                         
+ Max.   : NA                     
+ 
+ dat_test <- subset(dat_for_analysis_sub, !restrict_1)
+> summary(dat_test <- subset(dat_for_analysis_sub, !restrict_1))
+ data_use1.NOTCOV data_use1.AGE_P data_use1.female
+ Min.   : NA      Min.   : NA     Min.   : NA     
+ 1st Qu.: NA      1st Qu.: NA     1st Qu.: NA     
+ Median : NA      Median : NA     Median : NA     
+ Mean   :NaN      Mean   :NaN     Mean   :NaN     
+ 3rd Qu.: NA      3rd Qu.: NA     3rd Qu.: NA     
+ Max.   : NA      Max.   : NA     Max.   : NA     
+ data_use1.AfAm data_use1.Asian data_use1.RaceOther
+ Min.   : NA    Min.   : NA     Min.   : NA        
+ 1st Qu.: NA    1st Qu.: NA     1st Qu.: NA        
+ Median : NA    Median : NA     Median : NA        
+ Mean   :NaN    Mean   :NaN     Mean   :NaN        
+ 3rd Qu.: NA    3rd Qu.: NA     3rd Qu.: NA        
+ Max.   : NA    Max.   : NA     Max.   : NA        
+ data_use1.Hispanic data_use1.educ_hs data_use1.educ_smcoll
+ Min.   : NA        Min.   : NA       Min.   : NA          
+ 1st Qu.: NA        1st Qu.: NA       1st Qu.: NA          
+ Median : NA        Median : NA       Median : NA          
+ Mean   :NaN        Mean   :NaN       Mean   :NaN          
+ 3rd Qu.: NA        3rd Qu.: NA       3rd Qu.: NA          
+ Max.   : NA        Max.   : NA       Max.   : NA          
+ data_use1.educ_as data_use1.educ_bach data_use1.educ_adv
+ Min.   : NA       Min.   : NA         Min.   : NA       
+ 1st Qu.: NA       1st Qu.: NA         1st Qu.: NA       
+ Median : NA       Median : NA         Median : NA       
+ Mean   :NaN       Mean   :NaN         Mean   :NaN       
+ 3rd Qu.: NA       3rd Qu.: NA         3rd Qu.: NA       
+ Max.   : NA       Max.   : NA         Max.   : NA       
+ data_use1.married data_use1.widowed data_use1.divorc_sep
+ Min.   : NA       Min.   : NA       Min.   : NA         
+ 1st Qu.: NA       1st Qu.: NA       1st Qu.: NA         
+ Median : NA       Median : NA       Median : NA         
+ Mean   :NaN       Mean   :NaN       Mean   :NaN         
+ 3rd Qu.: NA       3rd Qu.: NA       3rd Qu.: NA         
+ Max.   : NA       Max.   : NA       Max.   : NA         
+ data_use1.REGIONMidwest data_use1.REGIONSouth
+ Min.   : NA             Min.   : NA          
+ 1st Qu.: NA             1st Qu.: NA          
+ Median : NA             Median : NA          
+ Mean   :NaN             Mean   :NaN          
+ 3rd Qu.: NA             3rd Qu.: NA          
+ Max.   : NA             Max.   : NA          
+ data_use1.REGIONWest
+ Min.   : NA         
+ 1st Qu.: NA         
+ Median : NA         
+ Mean   :NaN         
+ 3rd Qu.: NA         
+ Max.   : NA         
+ factor.data_use1.region_born.Mex.Cent.Am.Caribb
+ Min.   : NA                                    
+ 1st Qu.: NA                                    
+ Median : NA                                    
+ Mean   :NaN                                    
+ 3rd Qu.: NA                                    
+ Max.   : NA                                    
+ factor.data_use1.region_born.S.Am
+ Min.   : NA                      
+ 1st Qu.: NA                      
+ Median : NA                      
+ Mean   :NaN                      
+ 3rd Qu.: NA                      
+ Max.   : NA                      
+ factor.data_use1.region_born.Eur
+ Min.   : NA                     
+ 1st Qu.: NA                     
+ Median : NA                     
+ Mean   :NaN                     
+ 3rd Qu.: NA                     
+ Max.   : NA                     
+ factor.data_use1.region_born.former.USSR
+ Min.   : NA                             
+ 1st Qu.: NA                             
+ Median : NA                             
+ Mean   :NaN                             
+ 3rd Qu.: NA                             
+ Max.   : NA                             
+ factor.data_use1.region_born.Africa
+ Min.   : NA                        
+ 1st Qu.: NA                        
+ Median : NA                        
+ Mean   :NaN                        
+ 3rd Qu.: NA                        
+ Max.   : NA                        
+ factor.data_use1.region_born.MidE
+ Min.   : NA                      
+ 1st Qu.: NA                      
+ Median : NA                      
+ Mean   :NaN                      
+ 3rd Qu.: NA                      
+ Max.   : NA                      
+ factor.data_use1.region_born.India.subc
+ Min.   : NA                            
+ 1st Qu.: NA                            
+ Median : NA                            
+ Mean   :NaN                            
+ 3rd Qu.: NA                            
+ Max.   : NA                            
+ factor.data_use1.region_born.Asia
+ Min.   : NA                      
+ 1st Qu.: NA                      
+ Median : NA                      
+ Mean   :NaN                      
+ 3rd Qu.: NA                      
+ Max.   : NA                      
+ factor.data_use1.region_born.SE.Asia
+ Min.   : NA                         
+ 1st Qu.: NA                         
+ Median : NA                         
+ Mean   :NaN                         
+ 3rd Qu.: NA                         
+ Max.   : NA                         
+ factor.data_use1.region_born.Elsewhere
+ Min.   : NA                           
+ 1st Qu.: NA                           
+ Median : NA                           
+ Mean   :NaN                           
+ 3rd Qu.: NA                           
+ Max.   : NA                           
+ factor.data_use1.region_born.unknown
+ Min.   : NA                         
+ 1st Qu.: NA                         
+ Median : NA                         
+ Mean   :NaN                         
+ 3rd Qu.: NA                         
+ Max.   : NA                
+ 
+ sobj <- standardize(NOTCOV ~ Age + female + AfAm + Asian + RaceOther + Hispanic + 
++                       educ_hs + educ_smcoll + educ_as + educ_bach + educ_adv + 
++                       married + widowed + divorc_sep + 
++                       Region.Midwest + Region.South + Region.West + 
++                       born.Mex.CentAm.Carib + born.S.Am + born.Eur + born.f.USSR + 
++                       born.Africa + born.MidE + born.India.subc + born.Asia + 
++                       born.SE.Asia + born.elsewhere + born.unknown, dat_train, family = binomial)
+
+s_dat_test <- predict(sobj, dat_test)
+
+summary(model_lpm1)
+pred_vals_lpm <- predict(model_lpm1, s_dat_test)
+pred_model_lpm1 <- (pred_vals_lpm > 0.5)
+table(pred = pred_model_lpm1, true = dat_test$NOTCOV)
+model_logit1 <- glm(sobj$formula, family = binomial, data = sobj$data)
+summary(model_logit1)
+
+Call:
+glm(formula = NOTCOV ~ AGE_P + I(AGE_P^2) + female + AfAm + Asian + 
+    RaceOther + Hispanic + educ_hs + educ_smcoll + educ_as + 
+    educ_bach + educ_adv + married + widowed + divorc_sep + veteran_stat + 
+    REGION + region_born, family = binomial, data = data_use1)
+
+Deviance Residuals: 
+    Min       1Q   Median       3Q      Max  
+-1.9059  -0.5737  -0.3527  -0.1426   3.4876  
+
+Coefficients:
+                                Estimate Std. Error z value
+(Intercept)                   -3.483e+00  1.012e-01 -34.409
+AGE_P                          1.460e-01  4.917e-03  29.690
+I(AGE_P^2)                    -2.037e-03  5.737e-05 -35.515
+female                        -2.798e-01  2.213e-02 -12.642
+AfAm                          -1.428e-01  3.295e-02  -4.333
+Asian                         -2.090e-01  7.502e-02  -2.786
+RaceOther                      5.161e-01  6.624e-02   7.791
+Hispanic                       3.190e-01  3.453e-02   9.237
+educ_hs                       -2.247e-01  2.981e-02  -7.538
+educ_smcoll                   -6.324e-01  3.460e-02 -18.277
+educ_as                       -7.535e-01  4.267e-02 -17.660
+educ_bach                     -1.446e+00  4.374e-02 -33.070
+educ_adv                      -2.092e+00  7.157e-02 -29.235
+married                       -6.713e-01  2.747e-02 -24.438
+widowed                       -7.285e-02  8.427e-02  -0.864
+divorc_sep                    -4.546e-02  3.885e-02  -1.170
+veteran_stat                  -5.741e-01  5.930e-02  -9.681
+REGIONMidwest                  2.897e-01  4.063e-02   7.130
+REGIONSouth                    6.938e-01  3.517e-02  19.727
+REGIONWest                     2.898e-01  3.715e-02   7.803
+region_bornMex Cent Am Caribb  1.073e+00  3.845e-02  27.903
+region_bornS Am                9.640e-01  8.485e-02  11.361
+region_bornEur                 3.725e-01  1.019e-01   3.656
+region_bornformer USSR         9.614e-01  2.056e-01   4.677
+region_bornAfrica              8.256e-01  1.088e-01   7.584
+region_bornMidE                4.308e-01  1.752e-01   2.459
+region_bornIndia subc          8.892e-01  1.207e-01   7.367
+region_bornAsia                9.269e-01  1.128e-01   8.215
+region_bornSE Asia             4.657e-01  1.038e-01   4.486
+region_bornElsewhere           2.846e-01  1.625e-01   1.751
+region_bornunknown            -1.024e-01  1.910e-01  -0.536
+                              Pr(>|z|)    
+(Intercept)                    < 2e-16 ***
+AGE_P                          < 2e-16 ***
+I(AGE_P^2)                     < 2e-16 ***
+female                         < 2e-16 ***
+AfAm                          1.47e-05 ***
+Asian                         0.005334 ** 
+RaceOther                     6.63e-15 ***
+Hispanic                       < 2e-16 ***
+educ_hs                       4.78e-14 ***
+educ_smcoll                    < 2e-16 ***
+educ_as                        < 2e-16 ***
+educ_bach                      < 2e-16 ***
+educ_adv                       < 2e-16 ***
+married                        < 2e-16 ***
+widowed                       0.387338    
+divorc_sep                    0.241889    
+veteran_stat                   < 2e-16 ***
+REGIONMidwest                 1.00e-12 ***
+REGIONSouth                    < 2e-16 ***
+REGIONWest                    6.07e-15 ***
+region_bornMex Cent Am Caribb  < 2e-16 ***
+region_bornS Am                < 2e-16 ***
+region_bornEur                0.000256 ***
+region_bornformer USSR        2.92e-06 ***
+region_bornAfrica             3.34e-14 ***
+region_bornMidE               0.013933 *  
+region_bornIndia subc         1.75e-13 ***
+region_bornAsia                < 2e-16 ***
+region_bornSE Asia            7.25e-06 ***
+region_bornElsewhere          0.079915 .  
+region_bornunknown            0.592122    
+---
+Signif. codes:  
+0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+(Dispersion parameter for binomial family taken to be 1)
+
+    Null deviance: 69359  on 83938  degrees of freedom
+Residual deviance: 55821  on 83908  degrees of freedom
+  (28114 observations deleted due to missingness)
+AIC: 55883
+
+Number of Fisher Scoring iterations: 6
+pred_vals <- predict(model_logit1, s_dat_test, type = response)
+pred_model_logit1 <- (pred_vals > 0.5)
+table(pred = pred_model_logit1, true = dat_test$NOTCOV)
+require(randomForest)
+> summary(require(randomForest))
+   Mode    TRUE 
+logical       1
+set.seed(54321)
+model_randFor <- randomForest(as.factor(NOTCOV) ~ ., data = sobj$data, importance=TRUE, proximity=TRUE)
+print(model_randFor)
+
+round(importance(model_randFor),2)
+pred_model1 <- predict(model_randFor,  s_dat_test)
+table(pred = pred_model1, true = dat_test$NOTCOV)
+> # summary(tuned_parameters)
+> # figure best parameters and input into next
+> svm.model <- svm(as.factor(NOTCOV) ~ ., data = sobj$data, cost = 10, gamma = 0.1)
+
+require(e1071)
+# tuned_parameters <- tune.svm(as.factor(NOTCOV) ~ ., data = sobj$data, gamma = 10^(-3:0), cost = 10^(-2:1)) 
+# summary(tuned_parameters)
+# figure best parameters and input into next
+svm.model <- svm(as.factor(NOTCOV) ~ ., data = sobj$data, cost = 10, gamma = 0.1)
+svm.pred <- predict(svm.model, s_dat_test)
+table(pred = svm.pred, true = dat_test$NOTCOV)
+
+# Elastic Net
+require(glmnet)
+model1_elasticnet <-  glmnet(as.matrix(sobj$data[,-1]),sobj$data$NOTCOV) 
+# default is alpha = 1, lasso
+par(mar=c(4.5,4.5,1,4))
+plot(model1_elasticnet)
+vnat=coef(model1_elasticnet)
+vnat=vnat[-1,ncol(vnat)] # remove the intercept, and get the coefficients at the end of the path
+axis(4, at=vnat,line=-.5,label=names(sobj$data[,-1]),las=1,tick=FALSE, cex.axis=0.5) 
+plot(model1_elasticnet, xvar = "lambda")
+plot(model1_elasticnet, xvar = "dev", label = TRUE)
+print(model1_elasticnet)
+
+# Elastic Net
+require(glmnet)
+model1_elasticnet <-  glmnet(as.matrix(sobj$data[,-1]),sobj$data$NOTCOV) 
+# default is alpha = 1, lasso
+par(mar=c(4.5,4.5,1,4))
+plot(model1_elasticnet)
+vnat=coef(model1_elasticnet)
+vnat=vnat[-1,ncol(vnat)] # remove the intercept, and get the coefficients at the end of the path
+axis(4, at=vnat,line=-.5,label=names(sobj$data[,-1]),las=1,tick=FALSE, cex.axis=0.5) 
+plot(model1_elasticnet, xvar = "lambda")
+plot(model1_elasticnet, xvar = "dev", label = TRUE)
+print(model1_elasticnet)
+cvmodel1_elasticnet = cv.glmnet(data.matrix(sobj$data[,-1]),data.matrix(sobj$data$NOTCOV)) 
+cvmodel1_elasticnet$lambda.min
+log(cvmodel1_elasticnet$lambda.min)
+coef(cvmodel1_elasticnet, s = "lambda.min")
+
+pred1_elasnet <- predict(model1_elasticnet, newx = data.matrix(s_dat_test), s = cvmodel1_elasticnet$lambda.min)
+pred_model1_elasnet <- (pred1_elasnet < mean(pred1_elasnet)) 
+table(pred = pred_model1_elasnet, true = dat_test$NOTCOV)
+
+model2_elasticnet <-  glmnet(as.matrix(sobj$data[,-1]),sobj$data$NOTCOV, alpha = 0) 
+
+2) Two artciles
+1) Eliminating Waste in the US health care by Donald M. Berwich and Andrew D. Hackbarth
+2) Socioeconomic, Geospatial, and Geopolitical Disparities in Access to Health Care in the US 2011–2015 by Samuel D. Towne Jr.
+
+Summaries
+1) This firt aricle explains how it could be hard for some racial, minority and low income groups to seek healh care coverage beacue of itd cost. It is based on 2015 national survey about the US health care. It explained the US health care costs into a sustainable range for
+both public and private payers such as Commonly, programs to contain costs use cuts, such as reductions in payment levels, benefit structures, and eligibility.
+
+2) THis second article used the first empirical examination of disparities in
+H1N1 exposure, susceptibility to H1N1 complications, and access to health care
+during the H1N1 influenza pandemic. It used a nationally representative survey among a sample
+drawn from more than 60000 US households from 1479 adults, including significant numbers of Blacks and Hispanics. The Author asked
+respondents about their ability to impose social distance in response to publichealth recommendations, their chronic health conditions, and their access to
+health care to seek the result of risk of exposure
+ 
+
