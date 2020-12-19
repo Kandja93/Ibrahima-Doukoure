@@ -1,0 +1,372 @@
+---
+title: "The Heath Care Coverage in the US"
+author: "Ibrahima Doukoure & Alain Brou"
+date: "12/18/2020"
+output: html_document
+---
+
+---
+
+  
+  The Health Care Coverage in the United States
+
+Introduction
+
+The health care system in the United States is more complex because there is not a single and national system like in the many other industrial countries such as Canada, France, Germany, … It is now composed of the Patient Protection and Affordable Care Act (ACA), known popularly as Obamacare that Democrats passed in 2010 with no Republican support and many other private insurance compagnies. Even with the competition between those private insurances and the ACA, the cost of the health care is still higher for many Americans, it continues to increase year to year and the coverage rate is lower among low incomes and older peoples and generally among minorities groups.
+  
+  In this paper, our principal goal is to analyze the health care coverage in the United States and more precisely to find out with data the coverage rate among poor with low incomes, older people in minorities group like African Americans and Hispanics.
+Somme academic and peer reviewed journals are going to be used in the order to present the overview of the health care system in the United States and the coverage rate among minorities group before confirming those previous studies by our own research.
+
+"Journal of Health Care for the Poor and Underserved" is an academic journal wrrtien by Brennan Virginia from the Johns Hopkins University Press. Brenna underlined that poor people and those with existing conditions are suffering during this period of covid-19 as they did in past because of many litigations of ACA and the lower coverage rates among minorities group in US, which is linked to the health care cost what she called “Poor and Underserved” people.
+
+ "Eliminating Waste in US Health Care” is an academic journal written by Andrew Hackbarth and Donald M. Berwick and was published in Jama.com. In this artcile, they pointed out that the US health care is too costy and its ratio of the GDP is too higher and that has negative impacts on other gouvernemental programms. They proposed some solutions to reduce wastes ressources in the the US health care system and at same time to make it affordable to every patient (specially low income and minorities groups).
+
+ "Socioeconomic, Geospatial, and Geopolitical Disparities in Access to Health Care in the US 2011-2015" is an acdemic journal written by Samuel D. Towne Jr and was published in International Journal of Environmental Research and Public Health.Towner Jr studied impacts on forgone medical care rates by some sociodemographic factors such as education, sex, race/ethnicity, age; socioeconomic factors like income; geospatial factors such as rurality, census region;  and geopolitical factors such as state Medicaid Expansion or not among minorities groups: Hispanics, African Americans, Indian Americans, … He did find out that all those factors may play roles in whether an individual seeks or not a medical care even though he or she needs it in last twelve months prior to his research because of the cost related to the health care in the country.
+
+ 
+ Some previous studies on the health care coverage in the United States
+ 
+
+ Brennan pointed out that there are underserved people in the US who suffered and continue to suffer during this Covid-19 crisis and past health crisis. Their health and well-being are impacted because of police violence and because they could not have access to an affordable health care. He put it, “The organizing construct for JHCPU—socially defined populations that are underserved in ways affecting their health and well- being—places every one of these three titanic issues of 2020 in our domain. Prior to, during and after these three crises, JHCPU has been publishing on health policy, racial/ ethnic health inequities (extremely wide during COVID-19), and violence as a public health issue affecting underserved populations. Sadly, this year we have all three threatening to swamp underserved populations: health policy will continue to be most strongly influenced by the ultimate shape of the ACA, which is still being litigated; racial/ ethnic inequities in the incidence of and mortality from COVID-19 persist; and violence—including police violence against minority group members and the cognitively disabled—remains in the spotlight because it continues to occur in chilling ways relevant for the country as a whole (Brennan 2020)”.
+
+ Andrew Hackbarth and Donald M. Berwick demonstrated that the current health care system in the US cost a lot even though the sytem is politicized by Republcians and Democarts or Conservatives and liberals or Red States and Blue and polarized. Also, they recommanded to focus on revealing many wastes in its ressources in the order to help other important economic sectors to grow and favorise competitiveness among them. They wrote, “NO MATTER HOW POLARIZED politics in the United States have become, nearly everyone agrees that health care costs are unsustainable. At almost 18% of the gross domestic product (GDP) in 2011, beaded for 20% by 2020,''^ the nation's increasing health care expenditures reduce the resources available for other worthy government programs, erode wages, and undermine the competitiveness of US industry. Although Medicare and Medicaid are often in the limelight, the health care cost problem affects the private sector just as much as the public sector. Both need serious relief (Hackbarth 2012)”.
+
+ Furthermore, they think that ACA need some serious examinations in the order to reduce its burden costs on Government; however they recommended that it should be done very carefully because vulnerable people such as old people who are beneficiaries of Medicaid and low incomes people in general may see their health care negatively impacted. They continue, “The cost reductions in the ACA are necessary and prudent, but if other initiatives to cut spending are taken too far or too fast, they become risky. Vulnerable Medicaid beneficiaries and seniors covered by Medicare with marginal incomes may find important care services out of reach, either because they cannot afford the new cost-sharing, because clinicians and hospitals have withdrawn from local markets, or both (Hackbarth 2012)”.
+
+ Also, they argued that both strategies are needed: a new reconstruction of the current health care system in the country in the order to eliminate many of its wasted resources and to make it affordable to everyone. They argued, “Nonetheless, if the United States is to reconstruct a health care industry that is both affordable and relentlessly focused on meeting the needs of every single patient and family, waste reduction (that is, the removal of non-value-added practices in all their forms) is the best strategy by far (Hackbarth 2012).
+
+ Towne Jr. seems to be the one who studied seriously the health care coverage rates among minorities groups in the US and came up with very interesting results among targets of this research paper. He indentified serious obstacles that could prevent some Americans to forgone needed health care even though they may have what it is called “pre-existance conditions” that are animating every political debate in this country about the building of the eventual and national health care sustem. He put it, “Individuals forgoing needed medical care due to barriers associated with cost are at risk of missing needed care that may be necessary for the prevention or maintenance of a chronic condition among other things. Thus, continued monitoring of factors associated with forgone medical care, especially among vulnerable populations, is critical. National survey data (2011–2015) for non-institutionalized adults residing in the USA were utilized to assess forgone medical care, defined as not seeking medical care when the individual thought it was necessary because of cost in the past 12 months (Towne Jr. 2017)”.
+  
+ He used the National survey data (2011–2015) for non-institutionalized adults residing in the USA for his econometric study. The first interesting factor that he found to be one of those that may explained causes of the low health care coverage rates among minorities groups is socioeconomic factors such as incomes that are linked to economic cycles. He wrote, “Socioeconomic factors such as income may influence whether an individual seeks medical care when they believe it necessary. Further, differences in forgone medical care have been shown throughout times of economic downturns with particular gaps in access to medical care facing minority adults. These gaps in access to needed care have been shown to be different across social determinants of health (Towne Jr. 2017)”.
+
+ Furthermore, he used the World Organization’s Framework for Action and Social Determinants of Health to prove that the health care coverage rates among minorities groups and their lower frequencies to seek health care when they needed them  or to see doctors are very low around the world. He is not an American problem; it is a global one. He wrote, “The World Health Organization’s Framework for Action on the Social Determinants of Health postulates that health and health-related outcomes can be influenced by the structural and social determinants of health and health-related outcomes. Specifically, race/ethnicity, sex, education, and individual-level socioeconomic factors (e.g., income) serve as social determinants of health in this framework”. 
+
+ He concluded that there are other determinants beyond the socioeconomic factors that may prevent minorities groups composed of African Americans, Hispanics, American Asians, Native Americans, … to seek health care or to see doctors such as some sociodemographic factors such as education, sex, race/ethnicity, age; socioeconomic factors like income; geospatial factors such as rurality. He put it, “In addition to these individual-level factors, the structural determinants of health may include socioeconomic measures (e.g., macroeconomic policies) of larger geographic areas such as countries or states and public policies, including but not limited to health policies. Area-level characteristics that may impact access to medical care may include region, state socioeconomic variables based on income/poverty, and geopolitical characteristics, including Medicaid policies, which are based on research into early evaluations of Medicaid expansion that included a smaller geospatial scope (i.e., three US states with expansion relative to comparisons of non-expansion states). (Towne Jr. 2017)”.
+For the Data of his research, Towne Jr. used the Behavioral Risk Factor Surveillance System (BRFSS) as the primary dataset used in his current analyses. The 2011 (n = 506,467), 2012 (n = 475,687), 2013 (n = 491,773), 2014 (n = 464,664), and 2015 (n = 441,456) BRFSS public use files were used. The BRFSS is an annual telephone survey of non-institutionalized adults.
+ 	
+For his dependent Variable, he used the Forgone medical care as the primary outcome of interest in the current study. The survey item included ‘Was there a time in the past 12 months when you needed to see a doctor but could not because of cost?’ This was coded as yes vs. no (Towne Jr. 2017).
+
+For independent variables, “the BRFSS was used to measure all individual-level variables. Income was coded as Do not know/Not sure/Missing, Less than $15,000, $15,000 to less than $25,000, $25,000 to less than $35,000, $35,000 to less than $50,000, and $50,000 or more. Sex was coded as male or female. Education was coded as Did not graduate High School, Graduated High School, Attended College or Technical School, or Graduated from College or Technical School. Race and ethnicity were included as non-Hispanic White, non-Hispanic Black or African American, non-Hispanic American Indian or Alaska Native, non-Hispanic Asian, and Hispanic. An ‘other’ category was included, defined as individuals reporting any of the following classifications: Native Hawaiian or Other Pacific Islander, no preferred race, Multiracial but preferred race not asked, do not know/Not sure, or Refused. Those adults categorized as ‘other’ in terms of race/ethnicity are reported (Towne Jr. 2017).
+
+For the results, he presented them, “the distribution of outcomes of interest by key characteristics. Overall, nearly 20% of adults between the ages 18 to 64 reported a time when they did not seek health care services because of cost in the past 12 months (forgone medical care). This dropped to 15% in 2015. The rates were highest for adults with the lowest incomes (less than $15,000 annually) and among adults with the lowest education levels (without a high school degree or equivalent). The rates of forgone medical care were also highest for Hispanic adults, followed by Black or African American and American Indian or Alaska Native adults (not including those categorized as ‘other’) at nearly twice the rates of White or Asian adults. Further, individuals in rural areas had higher rates of forgone medical care than those in urban areas. The rates of forgone medical care were highest in the South (Towne Jr. 2017).
+
+  
+  Data
+
+The data to be used for this research paper is the Behavioral Risk Factor Surveillance System (BRFSS), from the State of New York named as NY2019.
+
+Dependent and independent variables
+	
+The first dependent variable is HLTHPLN1 or health care plans and dependent variables are Age, Income, Sex, Marital, Hispanic, Education, Female, Black, White, ....
+The second dependant variable is the Medcost or the medical cost with same independant variables as the first one.
+The third dependant variable is the HCOV or the health Coverage with same independant variables as the first one.
+
+summary(NY2019)
+    
+    X_STATE      WEIGHT2          HEIGHT3         X_SEX          X_AGE80     
+ Min.   :36   Min.   :  50.0   Min.   : 300   Min.   :1.000   Min.   :18.00  
+ 1st Qu.:36   1st Qu.: 150.0   1st Qu.: 504   1st Qu.:1.000   1st Qu.:30.00  
+ Median :36   Median : 180.0   Median : 507   Median :2.000   Median :40.00  
+ Mean   :36   Mean   : 920.1   Mean   :1005   Mean   :1.518   Mean   :38.98  
+ 3rd Qu.:36   3rd Qu.: 215.0   3rd Qu.: 511   3rd Qu.:2.000   3rd Qu.:49.00  
+ Max.   :36   Max.   :9999.0   Max.   :9999   Max.   :2.000   Max.   :55.00  
+              NA's   :233      NA's   :262                                   
+    MARITAL        X_HISPANC        X_PRACE1          EDUCA      
+ Min.   :1.000   Min.   :1.000   Min.   : 1.000   Min.   :1.000  
+ 1st Qu.:1.000   1st Qu.:2.000   1st Qu.: 1.000   1st Qu.:4.000  
+ Median :2.000   Median :2.000   Median : 1.000   Median :5.000  
+ Mean   :3.039   Mean   :1.942   Mean   : 6.338   Mean   :5.024  
+ 3rd Qu.:5.000   3rd Qu.:2.000   3rd Qu.: 2.000   3rd Qu.:6.000  
+ Max.   :9.000   Max.   :9.000   Max.   :99.000   Max.   :9.000  
+                                                                 
+    INCOME2         MEDCOST         HLTHPLN1        EMPLOY1     
+ Min.   : 1.00   Min.   :1.000   Min.   :1.000   Min.   :1.000  
+ 1st Qu.: 5.00   1st Qu.:2.000   1st Qu.:1.000   1st Qu.:1.000  
+ Median : 8.00   Median :2.000   Median :1.000   Median :1.000  
+ Mean   :20.76   Mean   :1.889   Mean   :1.143   Mean   :2.526  
+ 3rd Qu.: 8.00   3rd Qu.:2.000   3rd Qu.:1.000   3rd Qu.:4.000  
+ Max.   :99.00   Max.   :9.000   Max.   :9.000   Max.   :9.000  
+ NA's   :171                                     NA's   :63     
+    PERSDOC2          HCOV            female           Black       
+ Min.   :1.000   Min.   :0.0000   Min.   :0.0000   Min.   :0.0000  
+ 1st Qu.:1.000   1st Qu.:1.0000   1st Qu.:0.0000   1st Qu.:0.0000  
+ Median :1.000   Median :1.0000   Median :1.0000   Median :0.0000  
+ Mean   :1.599   Mean   :0.8776   Mean   :0.5177   Mean   :0.1334  
+ 3rd Qu.:2.000   3rd Qu.:1.0000   3rd Qu.:1.0000   3rd Qu.:0.0000  
+ Max.   :9.000   Max.   :1.0000   Max.   :1.0000   Max.   :1.0000  
+                                                                   
+     White            Asian            HISPANIC           NOHS        
+ Min.   :0.0000   Min.   :0.00000   Min.   :0.0000   Min.   :0.00000  
+ 1st Qu.:0.0000   1st Qu.:0.00000   1st Qu.:0.0000   1st Qu.:0.00000  
+ Median :1.0000   Median :0.00000   Median :0.0000   Median :0.00000  
+ Mean   :0.6482   Mean   :0.06128   Mean   :0.1776   Mean   :0.08196  
+ 3rd Qu.:1.0000   3rd Qu.:0.00000   3rd Qu.:0.0000   3rd Qu.:0.00000  
+ Max.   :1.0000   Max.   :1.00000   Max.   :1.0000   Max.   :1.00000  
+                                                                      
+       HS            Somecol           BMdegr          Student       
+ Min.   :0.0000   Min.   :0.0000   Min.   :0.0000   Min.   :0.00000  
+ 1st Qu.:0.0000   1st Qu.:0.0000   1st Qu.:0.0000   1st Qu.:0.00000  
+ Median :0.0000   Median :0.0000   Median :0.0000   Median :0.00000  
+ Mean   :0.2359   Mean   :0.2479   Mean   :0.4257   Mean   :0.06754  
+ 3rd Qu.:0.0000   3rd Qu.:0.0000   3rd Qu.:1.0000   3rd Qu.:0.00000  
+ Max.   :1.0000   Max.   :1.0000   Max.   :1.0000   Max.   :1.00000  
+                                                    NA's   :63       
+   Sefemploy         Hired           Married          Divorced      
+ Min.   :0.000   Min.   :0.0000   Min.   :0.0000   Min.   :0.00000  
+ 1st Qu.:0.000   1st Qu.:0.0000   1st Qu.:0.0000   1st Qu.:0.00000  
+ Median :0.000   Median :1.0000   Median :0.0000   Median :0.00000  
+ Mean   :0.112   Mean   :0.6003   Mean   :0.4395   Mean   :0.09176  
+ 3rd Qu.:0.000   3rd Qu.:1.0000   3rd Qu.:1.0000   3rd Qu.:0.00000  
+ Max.   :1.000   Max.   :1.0000   Max.   :1.0000   Max.   :1.00000  
+ NA's   :63      NA's   :63                                         
+     Single       Lessthan10000     Lessthan25000     Lessthan35000    
+ Min.   :0.0000   Min.   :0.00000   Min.   :0.00000   Min.   :0.00000  
+ 1st Qu.:0.0000   1st Qu.:0.00000   1st Qu.:0.00000   1st Qu.:0.00000  
+ Median :0.0000   Median :0.00000   Median :0.00000   Median :0.00000  
+ Mean   :0.3244   Mean   :0.04074   Mean   :0.07317   Mean   :0.07797  
+ 3rd Qu.:1.0000   3rd Qu.:0.00000   3rd Qu.:0.00000   3rd Qu.:0.00000  
+ Max.   :1.0000   Max.   :1.00000   Max.   :1.00000   Max.   :1.00000  
+                  NA's   :171       NA's   :171       NA's   :171      
+ Lessthan50000     Morethan75000   
+ Min.   :0.00000   Min.   :0.0000  
+ 1st Qu.:0.00000   1st Qu.:0.0000  
+ Median :0.00000   Median :0.0000  
+ Mean   :0.08324   Mean   :0.3386  
+ 3rd Qu.:0.00000   3rd Qu.:1.0000  
+ Max.   :1.00000   Max.   :1.0000  
+ NA's   :171       NA's   :171     
+> 
+	
+Results
+
+The first Model has the health care, HLTPLAN as the dependant variable
+
+lm(formula = HLTHPLN1 ~ X_SEX + X_AGE80 + MARITAL + HISPANIC + 
+    EDUCA + INCOME2 + EMPLOY1 + female + Black + White + Asian)
+
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-0.5321 -0.1800 -0.0978 -0.0206  8.0241 
+
+Coefficients: (1 not defined because of singularities)
+              Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  1.4026898  0.0529043  26.514  < 2e-16 ***
+X_SEX       -0.0462345  0.0132336  -3.494 0.000480 ***
+X_AGE80     -0.0002268  0.0006589  -0.344 0.730677    
+MARITAL      0.0200877  0.0034440   5.833 5.73e-09 ***
+HISPANIC     0.0828654  0.0204857   4.045 5.29e-05 ***
+EDUCA       -0.0367696  0.0061151  -6.013 1.93e-09 ***
+INCOME2      0.0007955  0.0002094   3.799 0.000147 ***
+EMPLOY1      0.0044241  0.0028512   1.552 0.120789    
+female              NA         NA      NA       NA    
+Black       -0.0785048  0.0263797  -2.976 0.002932 ** 
+White       -0.1356850  0.0213958  -6.342 2.43e-10 ***
+Asian       -0.0477074  0.0337126  -1.415 0.157083
+
+Analysis of Variance Table
+
+Response: HLTHPLN1
+            Df  Sum Sq Mean Sq F value    Pr(>F)    
+X_SEX        1    3.85  3.8526 14.3040  0.000157 ***
+X_AGE80      1    5.61  5.6068 20.8166 5.151e-06 ***
+MARITAL      1   14.64 14.6370 54.3439 1.901e-13 ***
+HISPANIC     1   24.41 24.4086 90.6236 < 2.2e-16 ***
+EDUCA        1   11.85 11.8456 43.9800 3.596e-11 ***
+INCOME2      1    6.23  6.2313 23.1353 1.545e-06 ***
+EMPLOY1      1    0.89  0.8877  3.2957  0.069509 .  
+Black        1    0.55  0.5524  2.0509  0.152169    
+White        1   12.16 12.1586 45.1421 1.994e-11 ***
+Asian        1    0.54  0.5394  2.0026  0.157083    
+Residuals 6248 1682.84  0.2693                      
+---
+Signif. codes:  
+0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+At 95%, all dependant variables are significant except of Asian, Black.
+
+Interpretations
+  
+Holding all other factors (explanatory variables) constant, the heath care coverage is explained by the intercept by 1.4026898 units.
+
+Holding all other factors (explanatory variables) constant, when the heath care coverage increases by one unit, the dependent variable X-Sex decreases by -0.0462345.
+
+Holding all other factors (explanatory variables) constant, when the heath care coverage increases by one unit, the dependent variable X-AGE80 decreases by 0.0002268.
+
+Holding all other factors (explanatory variables) constant, when the heath care coverage increases by one unit, the dependent variable MARITAL increases by 0.0200877.
+
+Holding all other factors (explanatory variables) constant, when the heath care coverage increases by one unit, the dependent variable HISPANIC increases by 0.0828654.
+
+Holding all other factors (explanatory variables) constant, when the heath care coverage increases by one unit, the dependent variable INCOME2 increases by 0.0007955 units.
+
+Holding all other factors (explanatory variables) constant, when the heath care coverage increases by one unit, the dependent variable EMPLOY1 increases by 0.0044241 units.
+
+Holding all other factors (explanatory variables) constant, the dependent variable female has no influence on the dependent variable the health care coverage.
+
+Holding all other factors (explanatory variables) constant, when the heath care coverage increases by one unit, the dependent variable Black decreases by 0.0785048 units.
+
+Holding all other factors (explanatory variables) constant, when the heath care coverage increases by one unit, the dependent variable White decreases by 0.1356850 units.
+
+Holding all other factors (explanatory variables) constant, when the heath care coverage increases by one unit, the dependent variable Asian decreases by 0.0477074 units.
+
+
+The second model has the medical cost as the dependant variables
+  
+    lm(formula = MEDCOST ~ X_SEX + + X_AGE80 + MARITAL + EDUCA + INCOME2 + HLTHPLN1 + EMPLOY1 + female + Black + White + HISPANIC + Somecol + Student + Sefemploy + Hired + Divorced + Single, data = NY2019)
+.
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-1.1386  0.0417  0.0835  0.1294  7.1384 
+
+Coefficients: (1 not defined because of singularities)
+              Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  1.8097942  0.0671853  26.937  < 2e-16 ***
+X_SEX       -0.0303095  0.0132202  -2.293 0.021900 *  
+X_AGE80      0.0007012  0.0007199   0.974 0.330055    
+MARITAL     -0.0125829  0.0041548  -3.028 0.002468 ** 
+EDUCA        0.0108553  0.0060898   1.783 0.074711 .  
+INCOME2      0.0004239  0.0002072   2.046 0.040784 *  
+HLTHPLN1    -0.0442133  0.0125671  -3.518 0.000438 ***
+EMPLOY1      0.0267974  0.0067937   3.944 8.09e-05 ***
+female              NA         NA      NA       NA    
+Black       -0.0125585  0.0235480  -0.533 0.593834    
+White       -0.0088804  0.0175182  -0.507 0.612225    
+HISPANIC    -0.0983549  0.0191080  -5.147 2.72e-07 ***
+Somecol     -0.0151861  0.0152013  -0.999 0.317835    
+Student     -0.0049714  0.0313907  -0.158 0.874168    
+Sefemploy    0.0862000  0.0357603   2.410 0.015960 *  
+Hired        0.1191905  0.0369770   3.223 0.001273 ** 
+Divorced    -0.0083413  0.0232104  -0.359 0.719324    
+Single       0.0140132  0.0192636   0.727 0.466980    
+---
+Signif. codes:  
+0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+Interpretations
+
+Dependant varaibles X-SEX, MARITAL, HLTHPLN1, BLACK, WHITE, HISPANIC, SOMECOL, DIVORCED decrease when the Medcost increases by ne unt.
+Dependant Variables X-Age80, Educa, Income2, Employ1, Selfemploy, Hired and Single increase when the dependant variable medcost incrreses by one unit.
+In this model, female has no influence on medcost.
+
+Residual standard error: 0.5127 on 6242 degrees of freedom
+  (171 observations deleted due to missingness)
+Multiple R-squared:  0.01789,	Adjusted R-squared:  0.01538 
+F-statistic: 7.108 on 16 and 6242 DF,  p-value: < 2.2e-16
+
+Analysis of Variance Table
+
+Response: MEDCOST
+            Df  Sum Sq Mean Sq F value    Pr(>F)    
+X_SEX        1    1.22  1.2181  4.6338 0.0313858 *  
+X_AGE80      1    3.15  3.1513 11.9882 0.0005390 ***
+MARITAL      1    3.26  3.2647 12.4196 0.0004279 ***
+EDUCA        1    3.50  3.5010 13.3186 0.0002649 ***
+INCOME2      1    1.46  1.4599  5.5537 0.0184726 *  
+HLTHPLN1     1    4.45  4.4502 16.9295 3.929e-05 ***
+EMPLOY1      1    1.76  1.7643  6.7116 0.0096011 ** 
+Black        1    0.00  0.0002  0.0006 0.9802694    
+White        1    0.51  0.5150  1.9591 0.1616589    
+HISPANIC     1    7.24  7.2432 27.5546 1.578e-07 ***
+Somecol      1    0.31  0.3103  1.1805 0.2772904    
+Student      1    0.08  0.0793  0.3016 0.5829189    
+Sefemploy    1    0.03  0.0327  0.1243 0.7244024    
+Hired        1    2.71  2.7122 10.3176 0.0013244 ** 
+Divorced     1    0.06  0.0551  0.2096 0.6470669    
+Single       1    0.14  0.1391  0.5292 0.4669801    
+Residuals 6242 1640.82  0.2629                      
+---
+Signif. codes:  
+0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+All dependant variables are significant ar 95% except Balck, single, divorced, selfemploy1.
+
+
+The third model as the healt coverage as the dependant variable
+
+lm(formula = HCOV ~ MEDCOST + X_SEX + + X_AGE80 + MARITAL + EDUCA + INCOME2 + HLTHPLN1 + EMPLOY1 + female + Black + White + HISPANIC + Somecol + Student + Sefemploy + Hired + Divorced + Single, data = NY2019)
+
+Residuals:
+     Min       1Q   Median       3Q      Max 
+-0.90125  0.00059  0.03604  0.07917  2.54320 
+
+Coefficients: (1 not defined because of singularities)
+              Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  9.290e-01  3.013e-02  30.834  < 2e-16 ***
+MEDCOST      5.061e-02  5.373e-03   9.420  < 2e-16 ***
+X_SEX        1.910e-02  5.614e-03   3.402 0.000673 ***
+X_AGE80      1.050e-03  3.056e-04   3.436 0.000593 ***
+MARITAL      6.663e-04  1.765e-03   0.378 0.705791    
+EDUCA        2.819e-02  2.586e-03  10.904  < 2e-16 ***
+INCOME2      2.506e-04  8.797e-05   2.849 0.004402 ** 
+HLTHPLN1    -4.153e-01  5.340e-03 -77.773  < 2e-16 ***
+EMPLOY1      1.410e-02  2.887e-03   4.883 1.07e-06 ***
+female              NA         NA      NA       NA    
+Black        1.890e-02  9.996e-03   1.891 0.058696 .  
+White        3.488e-02  7.436e-03   4.690 2.78e-06 ***
+HISPANIC    -6.291e-02  8.128e-03  -7.740 1.15e-14 ***
+Somecol      3.813e-03  6.453e-03   0.591 0.554583    
+Student      4.911e-02  1.332e-02   3.686 0.000230 ***
+Sefemploy    1.908e-02  1.519e-02   1.256 0.209078    
+Hired        8.671e-02  1.571e-02   5.520 3.53e-08 ***
+Divorced    -4.374e-03  9.852e-03  -0.444 0.657096    
+Single       5.857e-03  8.177e-03   0.716 0.473876    
+---
+Signif. codes:  
+0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.2176 on 6241 degrees of freedom
+  (171 observations deleted due to missingness)
+Multiple R-squared:  0.5538,	Adjusted R-squared:  0.5525 
+F-statistic: 455.6 on 17 and 6241 DF,  p-value: < 2.2e-16
+
+Interpretations
+
+Dependant varaibles Medcost, X-SEX, MARITAL, Educa, Income2, employ1, BLACK, WHITE, HISPANIC, SOMECOL, single incease when the the healt coveragee increases by one unt.
+Dependant Variables Divorced, Hispanic, helpln1 decrease when the dependant variable health coverage decrreses by one unit.
+In this model, female has no influence on health coverage.
+
+Analysis of Variance Table
+
+Response: HCOV
+            Df  Sum Sq Mean Sq   F value    Pr(>F)    
+MEDCOST      1  12.389  12.389  261.5658 < 2.2e-16 ***
+X_SEX        1   2.721   2.721   57.4518 3.968e-14 ***
+X_AGE80      1   3.053   3.053   64.4564 1.170e-15 ***
+MARITAL      1   2.102   2.102   44.3847 2.929e-11 ***
+EDUCA        1  26.447  26.447  558.3813 < 2.2e-16 ***
+INCOME2      1   0.207   0.207    4.3736  0.036539 *  
+HLTHPLN1     1 309.857 309.857 6542.0823 < 2.2e-16 ***
+EMPLOY1      1   0.206   0.206    4.3464  0.037129 *  
+Black        1   0.001   0.001    0.0241  0.876544    
+White        1   3.157   3.157   66.6613 3.868e-16 ***
+HISPANIC     1   3.233   3.233   68.2556 < 2.2e-16 ***
+Somecol      1   0.039   0.039    0.8269  0.363211    
+Student      1   0.480   0.480   10.1355  0.001462 ** 
+Sefemploy    1   1.445   1.445   30.5030 3.468e-08 ***
+Hired        1   1.436   1.436   30.3252 3.799e-08 ***
+Divorced     1   0.014   0.014    0.2934  0.588082    
+Single       1   0.024   0.024    0.5130  0.473876    
+Residuals 6241 295.597   0.047                        
+---
+Signif. codes:  
+0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+All dependant variables are signigicant at 95% except single, divorced, black.
+
+The variables which explained the dependent variables in the linear regression are almost the same as the logit regression. However, the logit regression yields more variables that influence the health insurance. the main interest is to know if there is any discrimination among health insurance coverage. The variable Black and white influence positively the health insurance coverage with the respective coefficients of 0.24 and 0.26. Hispanic race has a negative coefficient (-0.36). Race once again turns out to be consequent and significant in the health insurance coverage in New York. The marital status under the variable Married (0.22), Divorced (0.22) and Single (0.23) have positive coefficients. The education level under the High school plays a negative effect of getting health insurance in New York City. This draws us to comprehend that the population needs to be taught on the importance of getting any health insurance coverage. this point is shown to be statistically verified by the coefficient of the student variable (0.31) and is significant with alpha =5%. The Self-employed has a negative coefficient (-0.16), this means that the self-employed tend not to be insured to avoid expenses because knowing not the importance of health insurance. The Hired variable yields a positive influence on health insurance access. This is verified by the fact that workers in NY are proposed by their employer the possibility to get health insurance. The income matters in the end, the people getting between $35000 and $49000 dollars have a negative coefficient (-0.15) and is statistically significant at 90%. On contrary, the income that is more than$75000 is highly significant and has a positive coefficient (0.24). This is an answer of one of our questions. The female Asian is statistically significant at 90% confidence interval. But the coefficient is negative (- 0.18) which shows that Asian female is less likely to get health insurance in New York. Yet, the variable associated such as race and Income has shown no significance to prove any discrimination for any race or low incomes. LIMITATIONS We found that there is multicollinearity in the variable of education such as High school level or Bachdegr and female. However, we have maintained these variables in the interest of our hypothesis to comprehend if there is any racial discrimination intervening in the access to health insurance. Which we understand could undermine the accuracy of our predictions.
+
+DISCUSSION This study makes several important contributions to the understanding health insurance coverage among individuals who have low income and faced discriminations in American Society. First, racial background clearly matters, with blacks and White Americans more likely to getting health insurance coverage while Hispanics are less likely to get health insurance even after adjusting for sociodemographic factors. Second, socioeconomic disadvantages, including lower level of education, lower income, and lower education, are linked to decreased health insurance coverage. Another funding is the high effect of student on the access to health insurance coverage. This is the fruit of lecture and awareness of disease and pandemic developed by students, which leads them to get any health insurance that could remedy in case of illness. The negative influence of self-employed people on having a health insurance coverage also draws the attention. This could be motivated by the fact that they do not have an Agency that oversees them as to offer the possibility to get health insurance coverage. As a recommendation, the governor of New York to encourage those in self employment should create an agency which could bring to them the awareness of the need to get insured. Also, the regression also showed us that the poor family such as less $25000 dollars or medium class are less likely to get insured. this could be related to the price because those with the highest income such as more than $75000 are more likely to get a health insurance. So, as previous studies proved it, the Socioeconomics determinants are significant to individuals and households to get health insurance, even in New York.
+
+CONCLUSION This study suggests that socioeconomic status and race are important social determinants of anyone getting health insurance in New York. Though the first two hypothesis has not been confirmed, the third one has. Also, the likelihood of getting insured comes from student, hired people and income more than $75000 dollars. this suggest that the sensibilization and education could lead to the decrease of noninsured people. the government should also create agency special for the self-employed people to encourage them to have a health coverage. Also, a point brought by this research is about Hispanic that have a negative coefficient regression on health insurance due to immigration issues. Policymakers should assist by policy those who do not have legal papers to get insured.
+
+
+
+
+References
+
+Brennan Virginia. 2020. "Journal of Health Care for the Poor and Underserved." Johns Hopkins University Press. 
+
+Hackbarth, Donald M. Berwick and Andrew D. 2012. "Eliminating Waste in US Health Care." Jama.com Vol 307, No. 14.
+
+Towne Jr., Samuel D. 2017. "Socioeconomic, Geospatial, and Geopolitical Disparities in Access to Health Care in the US 2011-2015." International Journal of Environmental Research and Public Health 573.
+
+
+  
